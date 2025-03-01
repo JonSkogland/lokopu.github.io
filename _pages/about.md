@@ -4,6 +4,10 @@ title: About
 permalink: /about
 ---
 
-*This is an about page.*
+## About
 
-Feel free to tell the world about what you love! 😍
+Hi, I'm Jon Skogland.
+
+
+[My CV](https://rxresu.me/jonskogland/master-cv-jon-palmblad-skogland-engelsk)
+
