@@ -23,6 +23,9 @@ relative_permalinks: false
 plugins:
   - jekyll-last-modified-at
 
+
+favicon: /assets/favicon.png
+
 sass:
   sass_dir:          _sass
   style:            :compressed

@@ -1,0 +1,37 @@
+/*
+Error: Invalid CSS after "...sass/normalize"": expected "{", was ";"
+        on line 4 of styles.scss
+
+1: ---
+2: ---
+3: 
+4: @import "../_sass/normalize";
+5: @import "../_sass/code";
+6: @import "../_sass/style";
+
+Backtrace:
+styles.scss:4
+/opt/homebrew/lib/ruby/gems/3.4.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:1308:in 'Sass::SCSS::Parser.expected'
+/opt/homebrew/lib/ruby/gems/3.4.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:1238:in 'Sass::SCSS::Parser#expected'
+/opt/homebrew/lib/ruby/gems/3.4.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:1233:in 'Sass::SCSS::Parser#tok!'
+/opt/homebrew/lib/ruby/gems/3.4.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:688:in 'Sass::SCSS::Parser#block'
+/opt/homebrew/lib/ruby/gems/3.4.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:681:in 'Sass::SCSS::Parser#ruleset'
+/opt/homebrew/lib/ruby/gems/3.4.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:707:in 'Sass::SCSS::Parser#block_child'
+/opt/homebrew/lib/ruby/gems/3.4.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:697:in 'Sass::SCSS::Parser#block_contents'
+/opt/homebrew/lib/ruby/gems/3.4.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:137:in 'Sass::SCSS::Parser#stylesheet'
+/opt/homebrew/lib/ruby/gems/3.4.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:41:in 'Sass::SCSS::Parser#parse'
+/opt/homebrew/lib/ruby/gems/3.4.0/gems/sass-3.7.4/lib/sass/engine.rb:414:in 'Sass::Engine#_to_tree'
+/opt/homebrew/lib/ruby/gems/3.4.0/gems/sass-3.7.4/lib/sass/engine.rb:389:in 'Sass::Engine#_render_with_sourcemap'
+/opt/homebrew/lib/ruby/gems/3.4.0/gems/sass-3.7.4/lib/sass/engine.rb:307:in 'Sass::Engine#render_with_sourcemap'
+/opt/homebrew/lib/ruby/gems/3.4.0/gems/sass-3.7.4/lib/sass/exec/sass_scss.rb:387:in 'Sass::Exec::SassScss#run'
+/opt/homebrew/lib/ruby/gems/3.4.0/gems/sass-3.7.4/lib/sass/exec/sass_scss.rb:63:in 'Sass::Exec::SassScss#process_result'
+/opt/homebrew/lib/ruby/gems/3.4.0/gems/sass-3.7.4/lib/sass/exec/base.rb:50:in 'Sass::Exec::Base#parse'
+/opt/homebrew/lib/ruby/gems/3.4.0/gems/sass-3.7.4/lib/sass/exec/base.rb:18:in 'Sass::Exec::Base#parse!'
+/opt/homebrew/lib/ruby/gems/3.4.0/gems/sass-3.7.4/bin/sass:13:in '<top (required)>'
+/opt/homebrew/opt/ruby/bin/sass:25:in 'Kernel#load'
+/opt/homebrew/opt/ruby/bin/sass:25:in '<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"...sass/normalize\"\": expected \"{\", was \";\"\A         on line 4 of styles.scss\A \A 1: ---\A 2: ---\A 3: \A 4: @import \"../_sass/normalize\";\A 5: @import \"../_sass/code\";\A 6: @import \"../_sass/style\";"; }
