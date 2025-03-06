@@ -27,8 +27,8 @@ plugins:
 favicon: /assets/favicon.png
 
 sass:
-  sass_dir:          _sass
-  style:            :compressed
+  sass_dir: _sass
+  style: compressed
 
 collections:
   notes:
