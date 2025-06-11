@@ -20,8 +20,51 @@
               "icon": "lucide-file",
               "title": "First post"
             }
+          },
+          {
+            "id": "a8a96cad5c9f872a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "_staging/Machine Learning Specialization (Deeplearning.ai).md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Machine Learning Specialization (Deeplearning.ai)"
+            }
+          },
+          {
+            "id": "c1e0ff48e3df016e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "First post.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "First post"
+            }
+          },
+          {
+            "id": "5d05196c558196a4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Day 1 - 1000 days of coding.md",
+                "mode": "preview",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "Day 1 - 1000 days of coding"
+            }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -180,10 +223,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "5d36ab36027624f3",
+  "active": "5d05196c558196a4",
   "lastOpenFiles": [
     "First post.md",
-    "First post.md",
+    "Day 1 - 1000 days of coding.md",
+    "_staging/Machine Learning Specialization (Deeplearning.ai).md",
     "_templates/<% tp.file.rename(tp.date.now(\"YYYY-MM-DD\")) %>.md"
   ]
 }
