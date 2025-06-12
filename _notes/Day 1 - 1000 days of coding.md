@@ -1,5 +1,6 @@
 ---
 title: Day 1 - Linear regression on numerical data
+date: 2025-06-11
 ---
 
 Today marks the first day of a thousand days of coding.

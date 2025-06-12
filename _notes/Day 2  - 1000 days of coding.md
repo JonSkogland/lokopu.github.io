@@ -2,6 +2,7 @@
 title: Day 2 - Linear regression on big mac price vs GDP
 tags:
   - linear_regression
+date: 2025-06-12
 ---
 
 Today I used a dataset from The Economist of big mac prices and GDP across countries - [[https://github.com/TheEconomist/big-mac-data/tree/master]].
