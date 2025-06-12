@@ -69,12 +69,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Day 2  - 1000 days of coding.md",
+                "file": "Day 1 - 1000 days of coding.md",
                 "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Day 2  - 1000 days of coding"
+              "title": "Day 1 - 1000 days of coding"
             }
           }
         ],
@@ -239,8 +239,8 @@
   },
   "active": "3560becfbd95ce46",
   "lastOpenFiles": [
-    "Day 1 - 1000 days of coding.md",
     "Day 2  - 1000 days of coding.md",
+    "Day 1 - 1000 days of coding.md",
     "First post.md",
     "_staging/Machine Learning Specialization (Deeplearning.ai).md",
     "_templates/<% tp.file.rename(tp.date.now(\"YYYY-MM-DD\")) %>.md"
