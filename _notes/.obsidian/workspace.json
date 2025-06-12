@@ -62,9 +62,23 @@
               "icon": "lucide-file",
               "title": "Day 1 - 1000 days of coding"
             }
+          },
+          {
+            "id": "3560becfbd95ce46",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Day 2  - 1000 days of coding.md",
+                "mode": "preview",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "Day 2  - 1000 days of coding"
+            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -223,10 +237,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "5d05196c558196a4",
+  "active": "3560becfbd95ce46",
   "lastOpenFiles": [
-    "First post.md",
     "Day 1 - 1000 days of coding.md",
+    "Day 2  - 1000 days of coding.md",
+    "First post.md",
     "_staging/Machine Learning Specialization (Deeplearning.ai).md",
     "_templates/<% tp.file.rename(tp.date.now(\"YYYY-MM-DD\")) %>.md"
   ]
