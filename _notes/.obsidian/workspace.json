@@ -76,9 +76,23 @@
               "icon": "lucide-file",
               "title": "Day 2  - 1000 days of coding"
             }
+          },
+          {
+            "id": "c8ab0ff3ffee43cf",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Day 3 - data wrangling and plotting.md",
+                "mode": "preview",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "Day 3 - data wrangling and plotting"
+            }
           }
         ],
-        "currentTab": 4
+        "currentTab": 5
       }
     ],
     "direction": "vertical"
@@ -237,10 +251,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "3dd4f3c1dfe184f8",
+  "active": "c8ab0ff3ffee43cf",
   "lastOpenFiles": [
-    "Day 1 - 1000 days of coding.md",
     "Day 2  - 1000 days of coding.md",
+    "Day 3 - data wrangling and plotting.md",
+    "Day 1 - 1000 days of coding.md",
     "First post.md",
     "_staging/Machine Learning Specialization (Deeplearning.ai).md",
     "_templates/<% tp.file.rename(tp.date.now(\"YYYY-MM-DD\")) %>.md"
