@@ -83,16 +83,30 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Day 3 - data wrangling and plotting.md",
+                "file": "_templates/<% tp.file.rename(tp.date.now(\"YYYY-MM-DD\")) %>.md",
+                "mode": "source",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "<% tp.file.rename(tp.date.now(\"YYYY-MM-DD\")) %>"
+            }
+          },
+          {
+            "id": "064a28b193805673",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Day 4 - API and SQL.md",
                 "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Day 3 - data wrangling and plotting"
+              "title": "Day 4 - API and SQL"
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 6
       }
     ],
     "direction": "vertical"
@@ -251,13 +265,14 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "c8ab0ff3ffee43cf",
+  "active": "064a28b193805673",
   "lastOpenFiles": [
-    "Day 2  - 1000 days of coding.md",
     "Day 3 - data wrangling and plotting.md",
+    "Day 4 - API and SQL.md",
+    "_templates/<% tp.file.rename(tp.date.now(\"YYYY-MM-DD\")) %>.md",
     "Day 1 - 1000 days of coding.md",
+    "Day 2  - 1000 days of coding.md",
     "First post.md",
-    "_staging/Machine Learning Specialization (Deeplearning.ai).md",
-    "_templates/<% tp.file.rename(tp.date.now(\"YYYY-MM-DD\")) %>.md"
+    "_staging/Machine Learning Specialization (Deeplearning.ai).md"
   ]
 }
