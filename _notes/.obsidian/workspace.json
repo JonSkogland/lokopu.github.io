@@ -125,12 +125,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "day 6.md",
+                "file": "Day 5 - Web scraping.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "day 6"
+              "title": "Day 5 - Web scraping"
             }
           }
         ],
@@ -295,9 +295,9 @@
   },
   "active": "cd066057a29f9228",
   "lastOpenFiles": [
+    "Day 6 - Multivariate Linear regression.md",
     "Day 5 - Web scraping.md",
     "Day 4 - API and SQL.md",
-    "day 6.md",
     "Day 3 - data wrangling and plotting.md",
     "_templates/<% tp.file.rename(tp.date.now(\"YYYY-MM-DD\")) %>.md",
     "Day 1 - 1000 days of coding.md",

@@ -1,5 +1,5 @@
 ---
-title: Day 5 - Web sc
+title: Day 5 - Web scraping
 date: 2025-06-14
 ---
 Today I wanted to try my hand at web scraping to improve my data fetching skills.
