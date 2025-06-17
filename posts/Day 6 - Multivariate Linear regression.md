@@ -13,7 +13,7 @@ The jupyter notebook can be viewed here:
 <iframe 
 width=1000px
 height=800px
-src="https://nbviewer.org/github/Lokopu/1000daysofcoding/blob/main/daily-projects/day6_20250616/day6_advertising.ipynb">
+src="https://github.com/Lokopu/1000daysofcoding/blob/main/daily-projects/day6_20250616/day6_advertising.ipynb">
 </iframe>
 
 

@@ -167,12 +167,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Day 5 - Web scraping.md",
+                "file": "Day 7 - price optimization.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Day 5 - Web scraping"
+              "title": "Day 7 - price optimization"
             }
           }
         ],
@@ -335,29 +335,28 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "9351230c9d0f02cf",
+  "active": "3d2cd2835bc05bc3",
   "lastOpenFiles": [
-    "Day 5 - Web scraping.html",
-    "Day 5 - Web scraping_files/mediabag",
-    "Day 5 - Web scraping_files",
+    "Day 1 - 1000 days of coding.md",
+    "Day 2  - 1000 days of coding.md",
+    "Day 3 - data wrangling and plotting.md",
     "Day 4 - API and SQL.md",
     "Day 5 - Web scraping.md",
     "Day 6 - Multivariate Linear regression.md",
+    "Day 7 - price optimization.md",
+    "Day 5 - Web scraping.html",
+    "Day 5 - Web scraping_files/mediabag",
+    "Day 5 - Web scraping_files",
     "Day 6 - Multivariate Linear regression.html",
     "Day 6 - Multivariate Linear regression_files/mediabag",
     "Day 6 - Multivariate Linear regression_files",
-    "Day 3 - data wrangling and plotting.md",
-    "_staging/Day 7.md",
     "Day 3 - data wrangling and plotting.html",
     "Day 3 - data wrangling and plotting_files/mediabag",
     "Day 3 - data wrangling and plotting_files",
     "Day 1 - 1000 days of coding.html",
-    "Day 1 - 1000 days of coding_files/mediabag",
     "pages/Home.md",
     "pages/About.md",
     "_templates/<% tp.file.rename(tp.date.now(\"YYYY-MM-DD\")) %>.md",
-    "Day 1 - 1000 days of coding.md",
-    "Day 2  - 1000 days of coding.md",
     "First post.md",
     "_staging/Machine Learning Specialization (Deeplearning.ai).md"
   ]

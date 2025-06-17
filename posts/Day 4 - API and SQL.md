@@ -10,7 +10,7 @@ The jupyter notebook can be viewed here:
 <iframe 
 width=1000px
 height=800px
-src="https://nbviewer.org/github/Lokopu/1000daysofcoding/blob/1769f5824b3dc2897a3acb7a7635f0b8ba13cfe5/daily-projects/day4_20250614/Day%204%20-%20API%20and%20Database%20insert.ipynb">
+src="https://github.com/Lokopu/1000daysofcoding/blob/1769f5824b3dc2897a3acb7a7635f0b8ba13cfe5/daily-projects/day4_20250614/Day%204%20-%20API%20and%20Database%20insert.ipynb">
 </iframe>
 
 Additionally this is the code for the python script for fetching and loading the data.

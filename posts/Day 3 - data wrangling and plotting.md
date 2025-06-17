@@ -12,5 +12,5 @@ The jupyter notebook can be viewed here:
 <iframe 
 width=1000px
 height=800px
-src="https://nbviewer.org/github/Lokopu/1000daysofcoding/blob/main/daily-projects/day3_20250613/day%203%20-%20wrangling%20and%20plotting%20practice.ipynb">
+src="https://github.com/Lokopu/1000daysofcoding/blob/main/daily-projects/day3_20250613/day%203%20-%20wrangling%20and%20plotting%20practice.ipynb">
 </iframe>
