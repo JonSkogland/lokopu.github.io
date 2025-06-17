@@ -1,0 +1,349 @@
+{
+  "main": {
+    "id": "100200f013ddaa37",
+    "type": "split",
+    "children": [
+      {
+        "id": "7a87594d106f2f18",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "5d36ab36027624f3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "First post.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "First post"
+            }
+          },
+          {
+            "id": "a8a96cad5c9f872a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "_staging/Machine Learning Specialization (Deeplearning.ai).md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Machine Learning Specialization (Deeplearning.ai)"
+            }
+          },
+          {
+            "id": "c1e0ff48e3df016e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "First post.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "First post"
+            }
+          },
+          {
+            "id": "5d05196c558196a4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Day 1 - 1000 days of coding.md",
+                "mode": "preview",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "Day 1 - 1000 days of coding"
+            }
+          },
+          {
+            "id": "3560becfbd95ce46",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Day 2  - 1000 days of coding.md",
+                "mode": "source",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "Day 2  - 1000 days of coding"
+            }
+          },
+          {
+            "id": "c8ab0ff3ffee43cf",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "_templates/<% tp.file.rename(tp.date.now(\"YYYY-MM-DD\")) %>.md",
+                "mode": "source",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "<% tp.file.rename(tp.date.now(\"YYYY-MM-DD\")) %>"
+            }
+          },
+          {
+            "id": "064a28b193805673",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Day 4 - API and SQL.md",
+                "mode": "source",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "Day 4 - API and SQL"
+            }
+          },
+          {
+            "id": "1e59d5e2bfecd0d9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Day 5 - Web scraping.md",
+                "mode": "source",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "Day 5 - Web scraping"
+            }
+          },
+          {
+            "id": "cd066057a29f9228",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Day 5 - Web scraping.md",
+                "mode": "source",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "Day 5 - Web scraping"
+            }
+          },
+          {
+            "id": "2ba45f9288fb46fe",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "pages/About.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "About"
+            }
+          },
+          {
+            "id": "1b7adfca83f079e8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "pages/About.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "About"
+            }
+          }
+        ],
+        "currentTab": 10
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "22971608516f294c",
+    "type": "split",
+    "children": [
+      {
+        "id": "7852917884243212",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9351230c9d0f02cf",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "5e7f8a636f13403d",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "c3a0b475810ad955",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "c9dbbd65d1ff01c9",
+    "type": "split",
+    "children": [
+      {
+        "id": "4a0bcb42f7b7e5a9",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "46b2c6c06ece5f85",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "First post.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for First post"
+            }
+          },
+          {
+            "id": "bd677f7834cd4f25",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "First post.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from First post"
+            }
+          },
+          {
+            "id": "120584de7fd0c328",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "9935ab0b8cede61e",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "First post.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of First post"
+            }
+          },
+          {
+            "id": "3dd4f3c1dfe184f8",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
+          }
+        ],
+        "currentTab": 4
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "templater-obsidian:Templater": false,
+      "obsidian-git:Open Git source control": false
+    }
+  },
+  "active": "9351230c9d0f02cf",
+  "lastOpenFiles": [
+    "Day 3 - data wrangling and plotting.html",
+    "Day 3 - data wrangling and plotting_files/mediabag",
+    "Day 3 - data wrangling and plotting_files",
+    "pages/About.html",
+    "pages/About_files/mediabag",
+    "pages/About_files",
+    "pages/Home.html",
+    "pages/Home_files/mediabag",
+    "pages/Home_files",
+    "Day 1 - 1000 days of coding.html",
+    "Day 1 - 1000 days of coding_files/mediabag",
+    "pages/Home.md",
+    "pages/About.md",
+    "Day 5 - Web scraping.md",
+    "Day 6 - Multivariate Linear regression.md",
+    "Day 4 - API and SQL.md",
+    "Day 3 - data wrangling and plotting.md",
+    "_templates/<% tp.file.rename(tp.date.now(\"YYYY-MM-DD\")) %>.md",
+    "Day 1 - 1000 days of coding.md",
+    "Day 2  - 1000 days of coding.md",
+    "First post.md",
+    "_staging/Machine Learning Specialization (Deeplearning.ai).md"
+  ]
+}

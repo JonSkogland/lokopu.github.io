@@ -1,0 +1,8 @@
+---
+title: "Jon Skogland"
+listing:
+  contents: posts
+  sort: "date desc"
+  template: gallery.ejs
+---
+
