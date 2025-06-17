@@ -1,154 +1,37 @@
 {
   "main": {
-    "id": "100200f013ddaa37",
+    "id": "275539ac5077ffb9",
     "type": "split",
     "children": [
       {
-        "id": "7a87594d106f2f18",
+        "id": "ff52f8a1b97131e2",
         "type": "tabs",
         "children": [
           {
-            "id": "5d36ab36027624f3",
+            "id": "33d3d2516ce823d9",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "First post.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "First post"
-            }
-          },
-          {
-            "id": "a8a96cad5c9f872a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "_staging/Machine Learning Specialization (Deeplearning.ai).md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Machine Learning Specialization (Deeplearning.ai)"
-            }
-          },
-          {
-            "id": "c1e0ff48e3df016e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "First post.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "First post"
-            }
-          },
-          {
-            "id": "5d05196c558196a4",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Day 1 - 1000 days of coding.md",
-                "mode": "preview",
-                "source": true
-              },
-              "icon": "lucide-file",
-              "title": "Day 1 - 1000 days of coding"
-            }
-          },
-          {
-            "id": "3560becfbd95ce46",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Day 2  - 1000 days of coding.md",
-                "mode": "source",
-                "source": true
-              },
-              "icon": "lucide-file",
-              "title": "Day 2  - 1000 days of coding"
-            }
-          },
-          {
-            "id": "c8ab0ff3ffee43cf",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "_templates/<% tp.file.rename(tp.date.now(\"YYYY-MM-DD\")) %>.md",
-                "mode": "source",
-                "source": true
-              },
-              "icon": "lucide-file",
-              "title": "<% tp.file.rename(tp.date.now(\"YYYY-MM-DD\")) %>"
-            }
-          },
-          {
-            "id": "064a28b193805673",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Day 4 - API and SQL.md",
-                "mode": "source",
-                "source": true
-              },
-              "icon": "lucide-file",
-              "title": "Day 4 - API and SQL"
-            }
-          },
-          {
-            "id": "1e59d5e2bfecd0d9",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Day 5 - Web scraping.md",
-                "mode": "source",
-                "source": true
-              },
-              "icon": "lucide-file",
-              "title": "Day 5 - Web scraping"
-            }
-          },
-          {
-            "id": "cd066057a29f9228",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Day 5 - Web scraping.md",
-                "mode": "source",
-                "source": true
-              },
-              "icon": "lucide-file",
-              "title": "Day 5 - Web scraping"
+              "title": "New tab"
             }
           }
-        ],
-        "currentTab": 8
+        ]
       }
     ],
     "direction": "vertical"
   },
   "left": {
-    "id": "22971608516f294c",
+    "id": "b72a2239315c09f8",
     "type": "split",
     "children": [
       {
-        "id": "7852917884243212",
+        "id": "c8d0660100421ae2",
         "type": "tabs",
         "children": [
           {
-            "id": "9351230c9d0f02cf",
+            "id": "0998781c0b3e8c78",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -161,7 +44,7 @@
             }
           },
           {
-            "id": "5e7f8a636f13403d",
+            "id": "8a95de5751f772b7",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -178,7 +61,7 @@
             }
           },
           {
-            "id": "c3a0b475810ad955",
+            "id": "44bab783783e293f",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -194,20 +77,19 @@
     "width": 300
   },
   "right": {
-    "id": "c9dbbd65d1ff01c9",
+    "id": "2274412b1e9c93f2",
     "type": "split",
     "children": [
       {
-        "id": "4a0bcb42f7b7e5a9",
+        "id": "f1c3fabffd112481",
         "type": "tabs",
         "children": [
           {
-            "id": "46b2c6c06ece5f85",
+            "id": "193cfb7a959c4868",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "First post.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -217,25 +99,24 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for First post"
+              "title": "Backlinks"
             }
           },
           {
-            "id": "bd677f7834cd4f25",
+            "id": "95b342c594161879",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "First post.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from First post"
+              "title": "Outgoing links"
             }
           },
           {
-            "id": "120584de7fd0c328",
+            "id": "e979a2e67f4f9872",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -250,36 +131,25 @@
             }
           },
           {
-            "id": "9935ab0b8cede61e",
+            "id": "1ea132d66f02cccf",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "First post.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of First post"
-            }
-          },
-          {
-            "id": "3dd4f3c1dfe184f8",
-            "type": "leaf",
-            "state": {
-              "type": "git-view",
-              "state": {},
-              "icon": "git-pull-request",
-              "title": "Source Control"
+              "title": "Outline"
             }
           }
-        ],
-        "currentTab": 4
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -288,21 +158,9 @@
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
-      "command-palette:Open command palette": false,
-      "templater-obsidian:Templater": false,
-      "obsidian-git:Open Git source control": false
+      "command-palette:Open command palette": false
     }
   },
-  "active": "cd066057a29f9228",
-  "lastOpenFiles": [
-    "Day 6 - Multivariate Linear regression.md",
-    "Day 5 - Web scraping.md",
-    "Day 4 - API and SQL.md",
-    "Day 3 - data wrangling and plotting.md",
-    "_templates/<% tp.file.rename(tp.date.now(\"YYYY-MM-DD\")) %>.md",
-    "Day 1 - 1000 days of coding.md",
-    "Day 2  - 1000 days of coding.md",
-    "First post.md",
-    "_staging/Machine Learning Specialization (Deeplearning.ai).md"
-  ]
+  "active": "33d3d2516ce823d9",
+  "lastOpenFiles": []
 }
