@@ -167,7 +167,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Day 7.md",
+                "file": "_staging/Day 7.md",
                 "mode": "source",
                 "source": false
               },
@@ -335,20 +335,21 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "3d2cd2835bc05bc3",
+  "active": "9351230c9d0f02cf",
   "lastOpenFiles": [
-    "Day 6 - Multivariate Linear regression.md",
-    "Day 7.md",
     "Day 3 - data wrangling and plotting.html",
     "Day 3 - data wrangling and plotting_files/mediabag",
     "Day 3 - data wrangling and plotting_files",
-    "pages/About.html",
-    "pages/About_files/mediabag",
-    "pages/About_files",
-    "pages/Home.html",
-    "pages/Home_files/mediabag",
-    "pages/Home_files",
     "Day 1 - 1000 days of coding.html",
+    "Day 1 - 1000 days of coding_files/mediabag",
+    "Day 1 - 1000 days of coding_files",
+    "Day 6 - Multivariate Linear regression.html",
+    "Day 6 - Multivariate Linear regression_files/mediabag",
+    "Day 6 - Multivariate Linear regression_files",
+    "Day 2  - 1000 days of coding.html",
+    "Day 2  - 1000 days of coding_files/mediabag",
+    "Day 6 - Multivariate Linear regression.md",
+    "_staging/Day 7.md",
     "pages/Home.md",
     "pages/About.md",
     "Day 5 - Web scraping.md",

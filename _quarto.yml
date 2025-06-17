@@ -6,10 +6,10 @@ website:
   site-url: "https://jonskogland.com"
   navbar:
     left:
-      - href: index.qmd
+      - href: posts.qmd
         text: Posts
-      - href: about.qmd
-        text: About
+      - href: pdfs/Online_CV.pdf
+        text: CV
 
 format:
   html:
