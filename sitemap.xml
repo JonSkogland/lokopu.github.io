@@ -1,43 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://jonskogland.com/posts/Day 1 - 1000 days of coding.html</loc>
-    <lastmod>2025-06-17T07:15:49.021Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jonskogland.com/posts/Day 7.html</loc>
-    <lastmod>2025-06-17T07:15:49.021Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jonskogland.com/posts/Day 6 - Multivariate Linear regression.html</loc>
-    <lastmod>2025-06-17T07:15:49.021Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jonskogland.com/posts/Day 5 - Web scraping.html</loc>
-    <lastmod>2025-06-17T07:15:49.021Z</lastmod>
-  </url>
-  <url>
     <loc>https://jonskogland.com/posts.html</loc>
-    <lastmod>2025-06-17T07:15:49.015Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jonskogland.com/about.html</loc>
-    <lastmod>2025-06-17T07:15:49.007Z</lastmod>
+    <lastmod>2025-06-17T07:14:04.675Z</lastmod>
   </url>
   <url>
     <loc>https://jonskogland.com/index.html</loc>
-    <lastmod>2025-06-17T07:15:49.015Z</lastmod>
+    <lastmod>2025-06-17T07:14:04.675Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jonskogland.com/posts/Day 1 - 1000 days of coding.html</loc>
+    <lastmod>2025-06-17T07:14:04.683Z</lastmod>
   </url>
   <url>
     <loc>https://jonskogland.com/posts/Day 2  - 1000 days of coding.html</loc>
-    <lastmod>2025-06-17T07:15:49.021Z</lastmod>
+    <lastmod>2025-06-17T07:14:04.684Z</lastmod>
   </url>
   <url>
-    <loc>https://jonskogland.com/posts/Day 3 - data wrangling and plotting.html</loc>
-    <lastmod>2025-06-17T07:15:49.021Z</lastmod>
+    <loc>https://jonskogland.com/posts/Day 5 - Web scraping.html</loc>
+    <lastmod>2025-06-17T07:14:04.685Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jonskogland.com/posts/Day 7.html</loc>
+    <lastmod>2025-06-17T07:15:34.004Z</lastmod>
   </url>
   <url>
     <loc>https://jonskogland.com/posts/Day 4 - API and SQL.html</loc>
-    <lastmod>2025-06-17T07:15:49.021Z</lastmod>
+    <lastmod>2025-06-17T07:14:04.684Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jonskogland.com/posts/Day 6 - Multivariate Linear regression.html</loc>
+    <lastmod>2025-06-17T07:14:04.685Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jonskogland.com/posts/Day 3 - data wrangling and plotting.html</loc>
+    <lastmod>2025-06-17T07:14:04.684Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jonskogland.com/about.html</loc>
+    <lastmod>2025-06-17T07:14:04.659Z</lastmod>
   </url>
 </urlset>
