@@ -167,12 +167,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_staging/Day 7.md",
+                "file": "Day 5 - Web scraping.md",
                 "mode": "source",
-                "source": false
+                "source": true
               },
               "icon": "lucide-file",
-              "title": "Day 7"
+              "title": "Day 5 - Web scraping"
             }
           }
         ],
@@ -337,24 +337,24 @@
   },
   "active": "9351230c9d0f02cf",
   "lastOpenFiles": [
+    "Day 5 - Web scraping.html",
+    "Day 5 - Web scraping_files/mediabag",
+    "Day 5 - Web scraping_files",
+    "Day 4 - API and SQL.md",
+    "Day 5 - Web scraping.md",
+    "Day 6 - Multivariate Linear regression.md",
+    "Day 6 - Multivariate Linear regression.html",
+    "Day 6 - Multivariate Linear regression_files/mediabag",
+    "Day 6 - Multivariate Linear regression_files",
+    "Day 3 - data wrangling and plotting.md",
+    "_staging/Day 7.md",
     "Day 3 - data wrangling and plotting.html",
     "Day 3 - data wrangling and plotting_files/mediabag",
     "Day 3 - data wrangling and plotting_files",
     "Day 1 - 1000 days of coding.html",
     "Day 1 - 1000 days of coding_files/mediabag",
-    "Day 1 - 1000 days of coding_files",
-    "Day 6 - Multivariate Linear regression.html",
-    "Day 6 - Multivariate Linear regression_files/mediabag",
-    "Day 6 - Multivariate Linear regression_files",
-    "Day 2  - 1000 days of coding.html",
-    "Day 2  - 1000 days of coding_files/mediabag",
-    "Day 6 - Multivariate Linear regression.md",
-    "_staging/Day 7.md",
     "pages/Home.md",
     "pages/About.md",
-    "Day 5 - Web scraping.md",
-    "Day 4 - API and SQL.md",
-    "Day 3 - data wrangling and plotting.md",
     "_templates/<% tp.file.rename(tp.date.now(\"YYYY-MM-DD\")) %>.md",
     "Day 1 - 1000 days of coding.md",
     "Day 2  - 1000 days of coding.md",
