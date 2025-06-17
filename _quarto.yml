@@ -10,12 +10,14 @@ website:
         text: Posts
       - href: pdfs/Online_CV.pdf
         text: CV
+  search: false
 
 format:
   html:
     theme: cosmo
     css: styles.css
     toc: true
+    respect-user-color-scheme: true
 
 
 
