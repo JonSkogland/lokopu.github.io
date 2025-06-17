@@ -6,3 +6,11 @@ a {
   color: black;
 }
 
+.post-title {
+  text-decoration: none;
+}
+
+.post-item:hover .post-title {
+  text-decoration: underline;
+}
+
