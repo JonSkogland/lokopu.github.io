@@ -174,9 +174,37 @@
               "icon": "lucide-file",
               "title": "Day 7 - price optimization"
             }
+          },
+          {
+            "id": "a10681e2a16e192f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Day 7 - price optimization.md",
+                "mode": "source",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "Day 7 - price optimization"
+            }
+          },
+          {
+            "id": "031d6c20dc8ec6bc",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Day 8 - Python challenge.md",
+                "mode": "source",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "Day 8 - Python challenge"
+            }
           }
         ],
-        "currentTab": 11
+        "currentTab": 13
       }
     ],
     "direction": "vertical"
@@ -335,15 +363,17 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "3d2cd2835bc05bc3",
+  "active": "031d6c20dc8ec6bc",
   "lastOpenFiles": [
+    "Untitled.md",
+    "Day 8 - Python challenge.md",
+    "Day 7 - price optimization.md",
+    "Day 6 - Multivariate Linear regression.md",
     "Day 1 - 1000 days of coding.md",
     "Day 2  - 1000 days of coding.md",
     "Day 3 - data wrangling and plotting.md",
     "Day 4 - API and SQL.md",
     "Day 5 - Web scraping.md",
-    "Day 6 - Multivariate Linear regression.md",
-    "Day 7 - price optimization.md",
     "Day 5 - Web scraping.html",
     "Day 5 - Web scraping_files/mediabag",
     "Day 5 - Web scraping_files",
