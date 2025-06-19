@@ -195,16 +195,30 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Day 8 - Python challenge.md",
-                "mode": "source",
+                "file": "_templates/Day.md",
+                "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Day 8 - Python challenge"
+              "title": "Day"
+            }
+          },
+          {
+            "id": "68428caeeb8ff626",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Day 9 - Retrieving image with API.md",
+                "mode": "preview",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "Day 9 - Retrieving image with API"
             }
           }
         ],
-        "currentTab": 13
+        "currentTab": 14
       }
     ],
     "direction": "vertical"
@@ -363,9 +377,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "031d6c20dc8ec6bc",
+  "active": "68428caeeb8ff626",
   "lastOpenFiles": [
-    "Untitled.md",
+    "_templates/Day.md",
+    "Day 9 - Retrieving image with API.md",
     "Day 8 - Python challenge.md",
     "Day 7 - price optimization.md",
     "Day 6 - Multivariate Linear regression.md",
@@ -386,7 +401,6 @@
     "Day 1 - 1000 days of coding.html",
     "pages/Home.md",
     "pages/About.md",
-    "_templates/<% tp.file.rename(tp.date.now(\"YYYY-MM-DD\")) %>.md",
     "First post.md",
     "_staging/Machine Learning Specialization (Deeplearning.ai).md"
   ]
