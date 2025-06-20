@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2025-06-20">
 
-<title>Posts – Jon Skogland</title>
+<title>Day 10 - Retrieving by books by subject with API – Jon Skogland</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,21 +24,19 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-905433ffa22618bb005779f2b23c5ce0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-905433ffa22618bb005779f2b23c5ce0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "language": {
     "search-no-results-text": "No results",
@@ -53,77 +52,19 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-project','listing-website','listing-format','listing-language','listing-freeze','listing-title-block-banner','listing-title','listing-date','listing-path','listing-outputHref','listing-date-modified','listing-author','listing-description','listing-filename','listing-file-modified','listing-reading-time','listing-word-count','listing-tags',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-date-modified-sort'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] },{ data: ['listing-word-count-sort'] }],
-      
-      searchColumns: ["listing-project","listing-website","listing-format","listing-language","listing-freeze","listing-title-block-banner","listing-title","listing-date","listing-path","listing-outputHref","listing-date-modified","listing-author","listing-description","listing-filename","listing-file-modified","listing-reading-time","listing-word-count","listing-tags"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../styles.css">
 </head>
 
 <body class="nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Jon Skogland</span>
     </a>
   </div>
@@ -133,11 +74,11 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./posts.html" aria-current="page"> 
+    <a class="nav-link" href="../posts.html"> 
 <span class="menu-text">Posts</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./pdfs/Online_CV.pdf"> 
+    <a class="nav-link" href="../pdfs/Online_CV.pdf"> 
 <span class="menu-text">CV</span></a>
   </li>  
 </ul>
@@ -148,73 +89,95 @@ window.Quarto = {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Day 10 - Retrieving by books by subject with API</h1>
+                      </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">June 20, 2025</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
         
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Posts</h1>
-</div>
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
-<div class="quarto-title-meta">
 
+
+<p>I used this <a href="https://openlibrary.org/developers/api">API</a>, to fetch books by subject. Here I created a simple function where it’s possible to insert the desired subject and print them in a dataframe.</p>
+<p>See code below - can be viewed on github <a href="https://github.com/JonSkogland/1000daysofcoding/blob/main/daily-projects/day10_20250620/day10.ipynb">here</a></p>
+<pre><code>import requests
+import pandas as pd
+
+def retrieve_books_subject(subject):
+    # API URL
+    url = f"https://openlibrary.org/subjects/{subject}"
     
-  
-    
-  </div>
-  
+    params = {
+        "details" : "true" # In order to receive author information
+    }
+
+    headers = {
+        "accept": "application/json" # To specify json output format
+    }
+
+    # Get reponse to API
+    response = requests.get(url, headers=headers, params=params)
+    if response.status_code != 200:
+        return print("API call failed")
+
+    # Store response as json format
+    data = response.json()
+    if int(data["work_count"]) == 0:
+        return print("No books in this category. Please search for another category")
+
+    # Initialize books variable for later use
+    books = []
+
+    # Iterate through json object to retrieve specific information (title and author)
+    for keys in data["works"]:
+        # Store title of each book
+        title = keys["title"]
+        authors = []
+        for key in keys["authors"]:
+            # Append each author to a list
+            authors.append(key["name"])
+
+        # Insert title and authors into books variable
+        books.append({"title" : title, "authors" : authors})
+
+    # Make list into dataframe
+    df_books = pd.DataFrame(books)
+
+    # Remove square brackets from authors columns
+    df_books["authors"] = df_books["authors"].apply(lambda x: ", ".join(x))
+
+    # Return dataframe of fetched books for display
+    return df_books</code></pre>
 
 
-</header>
 
-
-
-
-
-
-<div class="quarto-listing quarto-listing-container-custom" id="listing-listing">
-<ul>
-<li>
-<a href="./posts/Day 10 - Retrieving by books by subject with API.html"> Jun 20, 2025 - Day 10 - Retrieving by books by subject with API</a>
-</li>
-<li>
-<a href="./posts/Day 9 - Retrieving image with API.html"> Jun 19, 2025 - Day 9 - Retrieving image with API</a>
-</li>
-<li>
-<a href="./posts/Day 8 - Python challenge.html"> Jun 18, 2025 - Day 8 - Dice roll generator</a>
-</li>
-<li>
-<a href="./posts/Day 7 - price optimization.html"> Jun 17, 2025 - Day 7 - Price optimization</a>
-</li>
-<li>
-<a href="./posts/Day 6 - Multivariate Linear regression.html"> Jun 16, 2025 - Day 6 - multivariate linear regression</a>
-</li>
-<li>
-<a href="./posts/Day 5 - Web scraping.html"> Jun 15, 2025 - Day 5 - Web scraping</a>
-</li>
-<li>
-<a href="./posts/Day 4 - API and SQL.html"> Jun 14, 2025 - Day 4 - API and SQL</a>
-</li>
-<li>
-<a href="./posts/Day 3 - data wrangling and plotting.html"> Jun 13, 2025 - Day 3 - data wrangling and plotting</a>
-</li>
-<li>
-<a href="./posts/Day 2  - 1000 days of coding.html"> Jun 12, 2025 - Day 2 - Linear regression on big mac price vs GDP</a>
-</li>
-<li>
-<a href="./posts/Day 1 - 1000 days of coding.html"> Jun 11, 2025 - Day 1 - Linear regression on numerical data</a>
-</li>
-</ul>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
