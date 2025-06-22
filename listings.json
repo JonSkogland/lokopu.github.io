@@ -2,6 +2,7 @@
   {
     "listing": "/posts.html",
     "items": [
+      "/posts/().html",
       "/posts/Day 12 - TicTacToe.html",
       "/posts/Day 11 - Rock, paper, scissor.html",
       "/posts/Day 10 - Retrieving by books by subject with API.html",

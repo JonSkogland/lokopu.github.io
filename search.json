@@ -14,67 +14,18 @@
     "text": "I initially wanted to fetch all the youtube videos from my favourite yoga youtuber, Tim Senesi, however the Google API proved too difficult at this time to be able to retrieve data from youtube.\nInstead I created a simple program to fetch and download the astronomy picture of the day from NASA.\n\nCode from program:\n# Libraries\n\nimport requests\n\nfrom dotenv import load_dotenv\n\nimport os\n  \n\n# Load dot environment files\n\nload_dotenv()\n\n\n# Get api key from environment file\n\nAPI_KEY = os.getenv(\"API_KEY\")\n\n# The url of Nasas image api\n\napi_url = \"https://api.nasa.gov/planetary/apod\"\n\n# Inserting api key when calling API\n\nparams = {\n\n\"api_key\": API_KEY\n\n}\n\n# Get response\n\nresponse = requests.get(api_url, params=params)\n\n# Convert response to json format\n\ndata = response.json()\n\n# Saving url of image to variable\n\nimage_url = data[\"hdurl\"]\n\n# Get request to fetch data from image url\n\nimg_data = requests.get(image_url).content\n\n\n# Open new file and write image data to file, where title of file is the title of the image\n\nwith open(f\"{data[\"title\"]}.jpg\", 'wb') as handler:\n\nhandler.write(img_data)"
   },
   {
-    "objectID": "posts/Day 3 - data wrangling and plotting.html",
-    "href": "posts/Day 3 - data wrangling and plotting.html",
-    "title": "Day 3 - data wrangling and plotting",
+    "objectID": "posts/Day 7 - price optimization.html",
+    "href": "posts/Day 7 - price optimization.html",
+    "title": "Day 7 - Price optimization",
     "section": "",
-    "text": "Today I focused on using pandas and plotting using altair to improve those skills. The dataset of the day is again from the economist and can be viewed here\nToday was a bit easier compared to the previous days as they lack machine learning usage.\nThe jupyter notebook can be viewed here:"
+    "text": "Tried my hand at price optimization - although heavily based on this guide: https://medium.com/operations-research-bit/a-practical-guide-to-pricing-optimisation-using-machine-learning-5ec4bf7f0d4c - as I have never done price optimization before.\nThe jupyter notebook can be viewed here:"
   },
   {
-    "objectID": "posts/Day 6 - Multivariate Linear regression.html",
-    "href": "posts/Day 6 - Multivariate Linear regression.html",
-    "title": "Day 6 - multivariate linear regression",
+    "objectID": "posts/Day 12 - TicTacToe.html",
+    "href": "posts/Day 12 - TicTacToe.html",
+    "title": "Day 12 - TicTacToe",
     "section": "",
-    "text": "Today I wanted to try multivariate linear regression\nI did so by using a dataset from the book Statistical Learning with Python, which included a few features of advertising expenditure in relation to sales figures.\nThe linear regression is however quite superficial, and does not go beyond fitting and evaluating model based on mean squared error, as I need to read through more text books on the subject to advance my machine learning skillset.\nThe jupyter notebook can be viewed here:"
-  },
-  {
-    "objectID": "posts/Day 2  - 1000 days of coding.html",
-    "href": "posts/Day 2  - 1000 days of coding.html",
-    "title": "Day 2 - Linear regression on big mac price vs GDP",
-    "section": "",
-    "text": "Today I used a datasetfrom The Economist of big mac prices and GDP across countries. I used this data to create a linear regression model to predict big mac prices based on GDP.\nAgain, like yesterday, I used Scikit-Learn and their linear regression model. As I’m still new to this space, I used guidance and code from this data science book.\nThe jupyter notebook can be viewed here:"
-  },
-  {
-    "objectID": "posts/Day 5 - Web scraping.html",
-    "href": "posts/Day 5 - Web scraping.html",
-    "title": "Day 5 - Web scraping",
-    "section": "",
-    "text": "Today I wanted to try my hand at web scraping to improve my data fetching skills.\nI did so by scraping all the name and addresses of Rema1000 stores across data and inserting them into a DataFrame.\nThe jupyter notebook can be viewed here:"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Jon Skogland",
-    "section": "",
-    "text": "This is my personal page, where I’m going to share thoughts, learnings and things that I pursue.  Click the above Posts link to see my recent posts  You can follow me here:\n\nMy Github: @JonSkogland"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "Hi, I’m Jon Skogland.\nThis is my personal page, where I’m going to share thoughts, learnings and things that I pursue.  Click the Posts link to see my posts  You can follow me here:\n\nMy Github: @lokopu"
-  },
-  {
-    "objectID": "posts.html",
-    "href": "posts.html",
-    "title": "Posts",
-    "section": "",
-    "text": "Jun 22, 2025 - Day 12 - TicTacToe\n\n\n Jun 21, 2025 - Day 11 - Rock, Paper, Scissor\n\n\n Jun 20, 2025 - Day 10 - Retrieving by books by subject with API\n\n\n Jun 19, 2025 - Day 9 - Retrieving image with API\n\n\n Jun 18, 2025 - Day 8 - Dice roll generator\n\n\n Jun 17, 2025 - Day 7 - Price optimization\n\n\n Jun 16, 2025 - Day 6 - multivariate linear regression\n\n\n Jun 15, 2025 - Day 5 - Web scraping\n\n\n Jun 14, 2025 - Day 4 - API and SQL\n\n\n Jun 13, 2025 - Day 3 - data wrangling and plotting\n\n\n Jun 12, 2025 - Day 2 - Linear regression on big mac price vs GDP\n\n\n Jun 11, 2025 - Day 1 - Linear regression on numerical data\n\n\nNo matching items"
-  },
-  {
-    "objectID": "posts/Day 10 - Retrieving by books by subject with API.html",
-    "href": "posts/Day 10 - Retrieving by books by subject with API.html",
-    "title": "Day 10 - Retrieving by books by subject with API",
-    "section": "",
-    "text": "I used this API, to fetch books by subject. Here I created a simple function where it’s possible to insert the desired subject and print them in a dataframe.\nSee code below - can be viewed on github here\nimport requests\nimport pandas as pd\n\ndef retrieve_books_subject(subject):\n    # API URL\n    url = f\"https://openlibrary.org/subjects/{subject}\"\n    \n    params = {\n        \"details\" : \"true\" # In order to receive author information\n    }\n\n    headers = {\n        \"accept\": \"application/json\" # To specify json output format\n    }\n\n    # Get reponse to API\n    response = requests.get(url, headers=headers, params=params)\n    if response.status_code != 200:\n        return print(\"API call failed\")\n\n    # Store response as json format\n    data = response.json()\n    if int(data[\"work_count\"]) == 0:\n        return print(\"No books in this category. Please search for another category\")\n\n    # Initialize books variable for later use\n    books = []\n\n    # Iterate through json object to retrieve specific information (title and author)\n    for keys in data[\"works\"]:\n        # Store title of each book\n        title = keys[\"title\"]\n        authors = []\n        for key in keys[\"authors\"]:\n            # Append each author to a list\n            authors.append(key[\"name\"])\n\n        # Insert title and authors into books variable\n        books.append({\"title\" : title, \"authors\" : authors})\n\n    # Make list into dataframe\n    df_books = pd.DataFrame(books)\n\n    # Remove square brackets from authors columns\n    df_books[\"authors\"] = df_books[\"authors\"].apply(lambda x: \", \".join(x))\n\n    # Return dataframe of fetched books for display\n    return df_books"
-  },
-  {
-    "objectID": "posts/Day 8 - Python challenge.html",
-    "href": "posts/Day 8 - Python challenge.html",
-    "title": "Day 8 - Dice roll generator",
-    "section": "",
-    "text": "For lack of inspiration today, I solved a challenge put forth on the internet: https://www.reddit.com/r/dailyprogrammer/comments/8s0cy1/20180618_challenge_364_easy_create_a_dice_roller/\nThe goal was to create a dice rolling program that takes the input e.g. “2d10”, meaning rolling 2 dice of 10 sides. Whereby the program will return the cumulative sum of the dice rolls.\nThe code can be viewed here:"
+    "text": "Today I created tictactoe - with limitations. I didn’t get around to test human input properly. You can’t win through diagonals yet… I know it is possible with numpy, but didn’t have the time. Also if it is a tie, the program keeps running.\nCode can be viewed here."
   },
   {
     "objectID": "posts/Day 11 - Rock, paper, scissor.html",
@@ -84,18 +35,67 @@
     "text": "As I am short on time today, I created a simple rock, paper, scissor program in Python. It is not written robustly, but simply gets the job done.\nSee code here: https://github.com/JonSkogland/1000daysofcoding/blob/main/daily-projects/day11_20250621/day11.py"
   },
   {
-    "objectID": "posts/Day 12 - TicTacToe.html",
-    "href": "posts/Day 12 - TicTacToe.html",
-    "title": "Day 12 - TicTacToe",
+    "objectID": "posts/Day 8 - Python challenge.html",
+    "href": "posts/Day 8 - Python challenge.html",
+    "title": "Day 8 - Dice roll generator",
     "section": "",
-    "text": "Today I created tictactoe - with limitations. I didn’t get around to test human input properly. You can’t win through diagonals yet.. I know it is possible with numpy, but didn’t have the time. Also if it is a tie, to program keeps running.\nCode can be viewed here: https://github.com/JonSkogland/1000daysofcoding/blob/main/daily-projects/day12_20250622/day12.py"
+    "text": "For lack of inspiration today, I solved a challenge put forth on the internet: https://www.reddit.com/r/dailyprogrammer/comments/8s0cy1/20180618_challenge_364_easy_create_a_dice_roller/\nThe goal was to create a dice rolling program that takes the input e.g. “2d10”, meaning rolling 2 dice of 10 sides. Whereby the program will return the cumulative sum of the dice rolls.\nThe code can be viewed here:"
   },
   {
-    "objectID": "posts/Day 7 - price optimization.html",
-    "href": "posts/Day 7 - price optimization.html",
-    "title": "Day 7 - Price optimization",
+    "objectID": "posts/Day 10 - Retrieving by books by subject with API.html",
+    "href": "posts/Day 10 - Retrieving by books by subject with API.html",
+    "title": "Day 10 - Retrieving by books by subject with API",
     "section": "",
-    "text": "Tried my hand at price optimization - although heavily based on this guide: https://medium.com/operations-research-bit/a-practical-guide-to-pricing-optimisation-using-machine-learning-5ec4bf7f0d4c - as I have never done price optimization before.\nThe jupyter notebook can be viewed here:"
+    "text": "I used this API, to fetch books by subject. Here I created a simple function where it’s possible to insert the desired subject and print them in a dataframe.\nSee code below - can be viewed on github here\nimport requests\nimport pandas as pd\n\ndef retrieve_books_subject(subject):\n    # API URL\n    url = f\"https://openlibrary.org/subjects/{subject}\"\n    \n    params = {\n        \"details\" : \"true\" # In order to receive author information\n    }\n\n    headers = {\n        \"accept\": \"application/json\" # To specify json output format\n    }\n\n    # Get reponse to API\n    response = requests.get(url, headers=headers, params=params)\n    if response.status_code != 200:\n        return print(\"API call failed\")\n\n    # Store response as json format\n    data = response.json()\n    if int(data[\"work_count\"]) == 0:\n        return print(\"No books in this category. Please search for another category\")\n\n    # Initialize books variable for later use\n    books = []\n\n    # Iterate through json object to retrieve specific information (title and author)\n    for keys in data[\"works\"]:\n        # Store title of each book\n        title = keys[\"title\"]\n        authors = []\n        for key in keys[\"authors\"]:\n            # Append each author to a list\n            authors.append(key[\"name\"])\n\n        # Insert title and authors into books variable\n        books.append({\"title\" : title, \"authors\" : authors})\n\n    # Make list into dataframe\n    df_books = pd.DataFrame(books)\n\n    # Remove square brackets from authors columns\n    df_books[\"authors\"] = df_books[\"authors\"].apply(lambda x: \", \".join(x))\n\n    # Return dataframe of fetched books for display\n    return df_books"
+  },
+  {
+    "objectID": "posts.html",
+    "href": "posts.html",
+    "title": "Posts",
+    "section": "",
+    "text": "- \n\n\n Jun 22, 2025 - Day 12 - TicTacToe\n\n\n Jun 21, 2025 - Day 11 - Rock, Paper, Scissor\n\n\n Jun 20, 2025 - Day 10 - Retrieving by books by subject with API\n\n\n Jun 19, 2025 - Day 9 - Retrieving image with API\n\n\n Jun 18, 2025 - Day 8 - Dice roll generator\n\n\n Jun 17, 2025 - Day 7 - Price optimization\n\n\n Jun 16, 2025 - Day 6 - multivariate linear regression\n\n\n Jun 15, 2025 - Day 5 - Web scraping\n\n\n Jun 14, 2025 - Day 4 - API and SQL\n\n\n Jun 13, 2025 - Day 3 - data wrangling and plotting\n\n\n Jun 12, 2025 - Day 2 - Linear regression on big mac price vs GDP\n\n\n Jun 11, 2025 - Day 1 - Linear regression on numerical data\n\n\nNo matching items"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "Hi, I’m Jon Skogland.\nThis is my personal page, where I’m going to share thoughts, learnings and things that I pursue.  Click the Posts link to see my posts  You can follow me here:\n\nMy Github: @lokopu"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Jon Skogland",
+    "section": "",
+    "text": "This is my personal page, where I’m going to share thoughts, learnings and things that I pursue.  Click the above Posts link to see my recent posts  You can follow me here:\n\nMy Github: @JonSkogland"
+  },
+  {
+    "objectID": "posts/Day 5 - Web scraping.html",
+    "href": "posts/Day 5 - Web scraping.html",
+    "title": "Day 5 - Web scraping",
+    "section": "",
+    "text": "Today I wanted to try my hand at web scraping to improve my data fetching skills.\nI did so by scraping all the name and addresses of Rema1000 stores across data and inserting them into a DataFrame.\nThe jupyter notebook can be viewed here:"
+  },
+  {
+    "objectID": "posts/Day 2  - 1000 days of coding.html",
+    "href": "posts/Day 2  - 1000 days of coding.html",
+    "title": "Day 2 - Linear regression on big mac price vs GDP",
+    "section": "",
+    "text": "Today I used a datasetfrom The Economist of big mac prices and GDP across countries. I used this data to create a linear regression model to predict big mac prices based on GDP.\nAgain, like yesterday, I used Scikit-Learn and their linear regression model. As I’m still new to this space, I used guidance and code from this data science book.\nThe jupyter notebook can be viewed here:"
+  },
+  {
+    "objectID": "posts/Day 6 - Multivariate Linear regression.html",
+    "href": "posts/Day 6 - Multivariate Linear regression.html",
+    "title": "Day 6 - multivariate linear regression",
+    "section": "",
+    "text": "Today I wanted to try multivariate linear regression\nI did so by using a dataset from the book Statistical Learning with Python, which included a few features of advertising expenditure in relation to sales figures.\nThe linear regression is however quite superficial, and does not go beyond fitting and evaluating model based on mean squared error, as I need to read through more text books on the subject to advance my machine learning skillset.\nThe jupyter notebook can be viewed here:"
+  },
+  {
+    "objectID": "posts/Day 3 - data wrangling and plotting.html",
+    "href": "posts/Day 3 - data wrangling and plotting.html",
+    "title": "Day 3 - data wrangling and plotting",
+    "section": "",
+    "text": "Today I focused on using pandas and plotting using altair to improve those skills. The dataset of the day is again from the economist and can be viewed here\nToday was a bit easier compared to the previous days as they lack machine learning usage.\nThe jupyter notebook can be viewed here:"
   },
   {
     "objectID": "posts/Day 4 - API and SQL.html",
