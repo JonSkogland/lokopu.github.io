@@ -2,70 +2,74 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://jonskogland.com/posts/Day 1 - 1000 days of coding.html</loc>
-    <lastmod>2025-06-25T14:05:28.314Z</lastmod>
+    <lastmod>2025-06-26T10:12:31.667Z</lastmod>
   </url>
   <url>
     <loc>https://jonskogland.com/posts/Day 9 - Retrieving image with API.html</loc>
-    <lastmod>2025-06-25T14:05:28.315Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jonskogland.com/posts/Day 3 - data wrangling and plotting.html</loc>
-    <lastmod>2025-06-25T14:05:28.315Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jonskogland.com/posts/Day 6 - Multivariate Linear regression.html</loc>
-    <lastmod>2025-06-25T14:05:28.315Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jonskogland.com/posts/Day 13 - weather api.html</loc>
-    <lastmod>2025-06-25T14:05:28.315Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jonskogland.com/posts/Day 2  - 1000 days of coding.html</loc>
-    <lastmod>2025-06-25T14:05:28.315Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jonskogland.com/posts/Day 5 - Web scraping.html</loc>
-    <lastmod>2025-06-25T14:05:28.315Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jonskogland.com/index.html</loc>
-    <lastmod>2025-06-25T14:05:28.308Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jonskogland.com/about.html</loc>
-    <lastmod>2025-06-25T14:05:28.300Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jonskogland.com/posts.html</loc>
-    <lastmod>2025-06-25T14:05:28.308Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jonskogland.com/posts/Day 10 - Retrieving by books by subject with API.html</loc>
-    <lastmod>2025-06-25T14:05:28.314Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jonskogland.com/posts/Day 8 - Python challenge.html</loc>
-    <lastmod>2025-06-25T14:05:28.315Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jonskogland.com/posts/Day 11 - Rock, paper, scissor.html</loc>
-    <lastmod>2025-06-25T14:05:28.314Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jonskogland.com/posts/Day 14 - Pandas exploration.html</loc>
-    <lastmod>2025-06-25T14:05:28.315Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jonskogland.com/posts/Day 12 - TicTacToe.html</loc>
-    <lastmod>2025-06-25T14:05:28.314Z</lastmod>
+    <lastmod>2025-06-26T10:12:31.668Z</lastmod>
   </url>
   <url>
     <loc>https://jonskogland.com/posts/Day 7 - price optimization.html</loc>
-    <lastmod>2025-06-25T14:05:28.315Z</lastmod>
+    <lastmod>2025-06-26T10:12:31.667Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jonskogland.com/posts/Day 12 - TicTacToe.html</loc>
+    <lastmod>2025-06-26T10:12:31.667Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jonskogland.com/posts/Day 14 - Pandas exploration.html</loc>
+    <lastmod>2025-06-26T10:12:31.667Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jonskogland.com/posts/Day 11 - Rock, paper, scissor.html</loc>
+    <lastmod>2025-06-26T10:12:31.667Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jonskogland.com/posts/Day 8 - Python challenge.html</loc>
+    <lastmod>2025-06-26T10:12:31.667Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jonskogland.com/posts/Day 10 - Retrieving by books by subject with API.html</loc>
+    <lastmod>2025-06-26T10:12:31.667Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jonskogland.com/posts.html</loc>
+    <lastmod>2025-06-26T10:12:31.661Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jonskogland.com/about.html</loc>
+    <lastmod>2025-06-26T10:12:31.652Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jonskogland.com/index.html</loc>
+    <lastmod>2025-06-26T10:12:31.660Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jonskogland.com/posts/Day 5 - Web scraping.html</loc>
+    <lastmod>2025-06-26T10:12:31.667Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jonskogland.com/posts/Day 2  - 1000 days of coding.html</loc>
+    <lastmod>2025-06-26T10:12:31.667Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jonskogland.com/posts/Day 13 - weather api.html</loc>
+    <lastmod>2025-06-26T10:12:31.667Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jonskogland.com/posts/Day 6 - Multivariate Linear regression.html</loc>
+    <lastmod>2025-06-26T10:12:31.667Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jonskogland.com/posts/Day 3 - data wrangling and plotting.html</loc>
+    <lastmod>2025-06-26T10:12:31.667Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jonskogland.com/posts/Day 15 - Classification.html</loc>
+    <lastmod>2025-06-26T10:12:31.667Z</lastmod>
   </url>
   <url>
     <loc>https://jonskogland.com/posts/Day 4 - API and SQL.html</loc>
-    <lastmod>2025-06-25T14:05:28.315Z</lastmod>
+    <lastmod>2025-06-26T10:12:31.667Z</lastmod>
   </url>
 </urlset>
