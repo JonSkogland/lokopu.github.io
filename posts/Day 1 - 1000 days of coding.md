@@ -16,5 +16,5 @@ The jupyter notebook can be viewed here:
 <iframe 
 width=1000px
 height=800px
-src="https://github.com/Lokopu/1000daysofcoding/blob/main/daily-projects/day%201%20-%202025-06-11/day1%20-%20linear%20regression%20of%20numerical%20data.ipynb">
+src="https://hub.2i2c.mybinder.org/user/jonskogland-1000daysofcoding-zh2za9yv/lab/tree/daily-projects/day%201%20-%202025-06-11/day1%20-%20linear%20regression%20of%20numerical%20data.ipynb">
 </iframe>

@@ -167,12 +167,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Day 20 - Plotting practice.md",
+                "file": "Day 1 - 1000 days of coding.md",
                 "mode": "source",
-                "source": false
+                "source": true
               },
               "icon": "lucide-file",
-              "title": "Day 20 - Plotting practice"
+              "title": "Day 1 - 1000 days of coding"
             }
           }
         ],
@@ -337,8 +337,8 @@
   },
   "active": "df73c8fe4aee55b0",
   "lastOpenFiles": [
-    "Day 19 - DecisionTreeRegressor.md",
     "Day 20 - Plotting practice.md",
+    "Day 19 - DecisionTreeRegressor.md",
     "Day 18 - pandas.md",
     "Day 17 - Formula 1 API.md",
     "Day 16 - Tracking of ISS on globe.md",
