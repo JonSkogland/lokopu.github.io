@@ -6,12 +6,7 @@ Today I wanted to try loading data from an API and inserting it into a database,
 
 I used a guide for fetching and loading data from CoinMarketCap via API and loading that into a SQLite3 database.
 
-The jupyter notebook can be viewed here:
-<iframe 
-width=1000px
-height=800px
-src="https://github.com/Lokopu/1000daysofcoding/blob/1769f5824b3dc2897a3acb7a7635f0b8ba13cfe5/daily-projects/day4_20250614/Day%204%20-%20API%20and%20Database%20insert.ipynb">
-</iframe>
+The jupyter notebook can be viewed [here](https://hub.2i2c.mybinder.org/user/jonskogland-1000daysofcoding-tgi6eawy/lab/tree/daily-projects/day4_20250614/day4.py).
 
 Additionally this is the code for the python script for fetching and loading the data.
 ```

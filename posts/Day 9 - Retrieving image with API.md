@@ -7,6 +7,8 @@ I initially wanted to fetch all the youtube videos from my favourite yoga youtub
 
 Instead I created a simple program to fetch and download the astronomy picture of the day from NASA.
 
+The jupyter notebook can be viewed [here](https://hub.2i2c.mybinder.org/user/jonskogland-1000daysofcoding-tgi6eawy/lab/tree/daily-projects/day9_20250619/day9.py).
+
 ### Code from program:
 
 ```

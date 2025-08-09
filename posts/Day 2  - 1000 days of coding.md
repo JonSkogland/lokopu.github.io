@@ -12,10 +12,4 @@ Again, like yesterday, I used Scikit-Learn  and their linear regression model.
 As I'm still new to this space, I used guidance and code from [this](https://python.datasciencebook.ca/regression2.html#linear-regression-in-python) data science book.
 
 
-The jupyter notebook can be viewed here:
-<iframe 
-width=1000px
-height=800px
-src="https://github.com/Lokopu/1000daysofcoding/blob/main/daily-projects/day%202%20-%202025-06-12/Day%202%20-%20Linear%20regression%20%28big%20mac%29.ipynb">
-</iframe>
-
+The jupyter notebook can be viewed [here](https://hub.2i2c.mybinder.org/user/jonskogland-1000daysofcoding-tgi6eawy/lab/tree/daily-projects/day%202%20-%202025-06-12/Day%202%20-%20Linear%20regression%20(big%20mac).ipynb).

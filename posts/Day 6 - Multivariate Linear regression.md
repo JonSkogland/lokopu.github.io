@@ -9,11 +9,6 @@ I did so by using a dataset from the book [Statistical Learning with Python](htt
 
 The linear regression is however quite superficial, and does not go beyond fitting and evaluating model based on mean squared error, as I need to read through more text books on the subject to advance my machine learning skillset.
 
-The jupyter notebook can be viewed here:
-<iframe 
-width=1000px
-height=800px
-src="https://github.com/Lokopu/1000daysofcoding/blob/main/daily-projects/day6_20250616/day6_advertising.ipynb">
-</iframe>
+The jupyter notebook can be viewed [here](https://hub.2i2c.mybinder.org/user/jonskogland-1000daysofcoding-tgi6eawy/lab/tree/daily-projects/day6_20250616/day6_advertising.ipynb).
 
 
