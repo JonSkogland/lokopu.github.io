@@ -335,8 +335,9 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "df73c8fe4aee55b0",
+  "active": "3dd4f3c1dfe184f8",
   "lastOpenFiles": [
+    "Day 17.ipynb",
     "Day 19 - DecisionTreeRegressor.md",
     "Day 18 - pandas.md",
     "Day 17 - Formula 1 API.md",
@@ -371,7 +372,6 @@
     "Day 1 - 1000 days of coding.html",
     "pages/Home.md",
     "pages/About.md",
-    "First post.md",
-    "_staging/Machine Learning Specialization (Deeplearning.ai).md"
+    "First post.md"
   ]
 }
