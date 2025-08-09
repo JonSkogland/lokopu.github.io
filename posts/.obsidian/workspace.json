@@ -167,12 +167,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Day 20 - Plotting practice.md",
+                "file": "Day 17 - Formula 1 API.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Day 20 - Plotting practice"
+              "title": "Day 17 - Formula 1 API"
             }
           }
         ],
@@ -335,8 +335,9 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "3dd4f3c1dfe184f8",
+  "active": "df73c8fe4aee55b0",
   "lastOpenFiles": [
+    "Day 20 - Plotting practice.md",
     "Day 17.ipynb",
     "Day 19 - DecisionTreeRegressor.md",
     "Day 18 - pandas.md",
@@ -357,7 +358,6 @@
     "Day 3 - data wrangling and plotting.md",
     "Day 2  - 1000 days of coding.md",
     "Day 1 - 1000 days of coding.md",
-    "Day 20 - Plotting practice.md",
     "().md",
     "_templates/Day.md",
     "Day 5 - Web scraping.html",
@@ -369,7 +369,6 @@
     "Day 3 - data wrangling and plotting.html",
     "Day 3 - data wrangling and plotting_files/mediabag",
     "Day 3 - data wrangling and plotting_files",
-    "Day 1 - 1000 days of coding.html",
     "pages/Home.md",
     "pages/About.md",
     "First post.md"
