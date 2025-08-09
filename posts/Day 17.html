@@ -6,6 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2025-06-28">
 
 <title>Day 17 - Formula 1 API – Jon Skogland</title>
 <style>
@@ -137,6 +138,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <div class="quarto-title-meta">
 
       
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">2025-06-28</p>
+      </div>
+    </div>
     
       
     </div>
@@ -155,7 +162,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-<div id="a54b005f-fb8e-4a0a-b487-3ae46973ab2c" class="cell" data-execution_count="25">
+<div id="a54b005f-fb8e-4a0a-b487-3ae46973ab2c" class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> requests</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> json</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
@@ -188,7 +195,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>    meeting_id <span class="op">=</span> df_meetings[<span class="st">"meeting_key"</span>]</span>
 <span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>    meeting_id</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="9a25369c-4812-4258-8495-2c25de6ed839" class="cell" data-execution_count="27">
+<div id="9a25369c-4812-4258-8495-2c25de6ed839" class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Insert retieved meeting ID as weather api only takes meeting id or session id</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>params_weather <span class="op">=</span> {</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"meeting_key"</span>: meeting_id</span>
@@ -371,7 +378,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<div id="2a50baa2-cc3e-4337-8046-2d6c336cbebb" class="cell" data-execution_count="29">
+<div id="2a50baa2-cc3e-4337-8046-2d6c336cbebb" class="cell">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Shows evolution of track temperature for the Austrian Grand Prix, First Practice 2.</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>track_temp <span class="op">=</span> alt.Chart(df_weather).mark_line().encode(</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    alt.X(<span class="st">"date"</span>).title(<span class="st">"Date"</span>),</span>
@@ -455,7 +462,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </script>
 </div>
 </div>
-<div id="4df889ac-60bc-4316-b5ea-d479988410a8" class="cell" data-execution_count="41">
+<div id="4df889ac-60bc-4316-b5ea-d479988410a8" class="cell">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>df_weather.dtypes</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="41">
 <pre><code>date                  object
@@ -471,10 +478,10 @@ humidity             float64
 dtype: object</code></pre>
 </div>
 </div>
-<div id="773d79b0-a6e0-4074-a26b-3bbdebb2ac65" class="cell" data-execution_count="42">
+<div id="773d79b0-a6e0-4074-a26b-3bbdebb2ac65" class="cell">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>df_weather[<span class="st">"date"</span>] <span class="op">=</span> pd.to_datetime(df_weather[<span class="st">"date"</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="310af35f-9af8-4404-ad4b-f395a7b7599c" class="cell" data-execution_count="43">
+<div id="310af35f-9af8-4404-ad4b-f395a7b7599c" class="cell">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>df_weather.dtypes</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="43">
 <pre><code>date                 datetime64[ns, UTC]
@@ -490,7 +497,7 @@ humidity                         float64
 dtype: object</code></pre>
 </div>
 </div>
-<div id="7b40017b-f30f-480a-8cb8-d0a11837f6d6" class="cell" data-execution_count="51">
+<div id="7b40017b-f30f-480a-8cb8-d0a11837f6d6" class="cell">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Groupby by</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>df_weather.groupby(df_weather[<span class="st">"date"</span>].dt.day).agg({<span class="st">"track_temperature"</span>: [<span class="st">"min"</span>, <span class="st">"median"</span>, <span class="st">"max"</span>]})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="51">
