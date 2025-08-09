@@ -171,32 +171,338 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="exploratory-data-analysis-af-adgangsgrundlag-for-vidergående-uddannelser" class="level1">
 <h1>Exploratory Data Analysis af adgangsgrundlag for vidergående uddannelser</h1>
 <p>Data hentet fra UFM - <a href="https://ufm.dk/uddannelse/statistik-og-analyser/sogning-og-optag-pa-videregaende-uddannelser/grundtal-om-sogning-og-optag/ansogere-og-optagne-fordelt-pa-kon-alder-og-adgangsgrundlag">Link</a></p>
-<div id="6e7328d6-f41a-411f-85f7-f303ab0df9b7" class="cell" data-execution_count="372">
+<div id="6e7328d6-f41a-411f-85f7-f303ab0df9b7" class="cell" data-execution_count="41">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="350569ce-8a3a-4a9f-9af4-c1e85d77637b" class="cell" data-execution_count="373">
+<div id="350569ce-8a3a-4a9f-9af4-c1e85d77637b" class="cell" data-execution_count="42">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_excel(<span class="st">"data/day21/Ansøgere_adgangsgrundlag.xlsx"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
-<pre><code>/Users/jonskogland/1000daysofcoding/daily-projects/1000daysofcoding/lib/python3.13/site-packages/openpyxl/styles/stylesheet.py:237: UserWarning: Workbook contains no default style, apply openpyxl's default
+<pre><code>/Users/jonskogland/Documents/hjemmeside - Jon Skogland/lokopu.github.io/venv/lib/python3.13/site-packages/openpyxl/styles/stylesheet.py:237: UserWarning: Workbook contains no default style, apply openpyxl's default
   warn("Workbook contains no default style, apply openpyxl's default")</code></pre>
 </div>
 </div>
-<div id="878a5bf5-60c8-46c1-a6c8-3603e0015558" class="cell" data-execution_count="374">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>adgange <span class="op">=</span> df.head(<span class="dv">17</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="290ea804-a63e-49d4-9141-a3bcd493ddf0" class="cell" data-execution_count="43">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="43">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">Den Koordinerede Tilmelding</th>
+<th data-quarto-table-cell-role="th">Unnamed: 1</th>
+<th data-quarto-table-cell-role="th">Unnamed: 2</th>
+<th data-quarto-table-cell-role="th">1. prioritets-ansøgere fordelt på adgangsgrundlag</th>
+<th data-quarto-table-cell-role="th">Unnamed: 4</th>
+<th data-quarto-table-cell-role="th">Unnamed: 5</th>
+<th data-quarto-table-cell-role="th">Unnamed: 6</th>
+<th data-quarto-table-cell-role="th">Unnamed: 7</th>
+<th data-quarto-table-cell-role="th">Unnamed: 8</th>
+<th data-quarto-table-cell-role="th">Unnamed: 9</th>
+<th data-quarto-table-cell-role="th">...</th>
+<th data-quarto-table-cell-role="th">Unnamed: 11</th>
+<th data-quarto-table-cell-role="th">Unnamed: 12</th>
+<th data-quarto-table-cell-role="th">Unnamed: 13</th>
+<th data-quarto-table-cell-role="th">Unnamed: 14</th>
+<th data-quarto-table-cell-role="th">Unnamed: 15</th>
+<th data-quarto-table-cell-role="th">Unnamed: 16</th>
+<th data-quarto-table-cell-role="th">Unnamed: 17</th>
+<th data-quarto-table-cell-role="th">Unnamed: 18</th>
+<th data-quarto-table-cell-role="th">Unnamed: 19</th>
+<th data-quarto-table-cell-role="th">Unnamed: 20</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>22-juli-2024</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>...</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>...</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>1=stx</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>...</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>2=hf</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>...</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">4</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>3=hhx</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>...</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">944</td>
+<td>8800</td>
+<td>Erhvervsakademi Dania</td>
+<td>84410</td>
+<td>Produktionsteknolog, Randers SØ, Studiestart: ...</td>
+<td>6</td>
+<td>NaN</td>
+<td>1.0</td>
+<td>1.0</td>
+<td>NaN</td>
+<td>1.0</td>
+<td>...</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>1.0</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>1.0</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">945</td>
+<td>8800</td>
+<td>Erhvervsakademi Dania</td>
+<td>86160</td>
+<td>Service- og oplevelsesøkonom, Randers SØ, Stud...</td>
+<td>15</td>
+<td>1</td>
+<td>7.0</td>
+<td>1.0</td>
+<td>3.0</td>
+<td>NaN</td>
+<td>...</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>1.0</td>
+<td>1.0</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>1.0</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">946</td>
+<td>8800</td>
+<td>Erhvervsakademi Dania</td>
+<td>86164</td>
+<td>Service- og oplevelsesøkonom, Randers SØ, E-læ...</td>
+<td>45</td>
+<td>NaN</td>
+<td>12.0</td>
+<td>10.0</td>
+<td>3.0</td>
+<td>4.0</td>
+<td>...</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>5.0</td>
+<td>7.0</td>
+<td>NaN</td>
+<td>1.0</td>
+<td>NaN</td>
+<td>1.0</td>
+<td>1.0</td>
+<td>1.0</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">947</td>
+<td>8800</td>
+<td>Erhvervsakademi Dania</td>
+<td>86166</td>
+<td>Service- og oplevelsesøkonom, Randers SØ, E-læ...</td>
+<td>9</td>
+<td>NaN</td>
+<td>1.0</td>
+<td>3.0</td>
+<td>4.0</td>
+<td>NaN</td>
+<td>...</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>1.0</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">948</td>
+<td>8800</td>
+<td>Erhvervsakademi Dania</td>
+<td>87110</td>
+<td>Logistikøkonom , Hobro, Studiestart: sommerstart</td>
+<td>15</td>
+<td>NaN</td>
+<td>4.0</td>
+<td>5.0</td>
+<td>4.0</td>
+<td>1.0</td>
+<td>...</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>1.0</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+</tbody>
+</table>
+
+<p>949 rows × 21 columns</p>
 </div>
-<div id="aa6e7c3f-f4af-41be-ad6e-328bada9ca3d" class="cell" data-execution_count="375">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>adgange <span class="op">=</span> adgange.iloc[<span class="dv">2</span>:,<span class="dv">3</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="6318ff7f-c22e-4e85-a1a9-d9d2504ec10a" class="cell" data-execution_count="376">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>adgange <span class="op">=</span> adgange.<span class="bu">str</span>.split(<span class="st">"="</span>, expand<span class="op">=</span><span class="va">True</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="018950d9-9fd2-4b14-857f-7613fd01c7c8" class="cell" data-execution_count="377">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>adgange <span class="op">=</span> adgange.rename(columns<span class="op">=</span>{<span class="dv">0</span>: <span class="st">"id"</span>, <span class="dv">1</span>: <span class="st">"adgangsgrundlag"</span>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Her ses det at dataframe’en har nogle header rækker øverst som skal filtreres fra, samtidigt er der data som skal bruges til at indsætte navne på adgangsgrundlagene for kolonnerne fra 4 og frem. da der ellers kun står et tal som er svært at læse.</p>
+<div id="878a5bf5-60c8-46c1-a6c8-3603e0015558" class="cell" data-execution_count="44">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>adgange <span class="op">=</span> df.head(<span class="dv">17</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="9a3da444-77be-4d17-b7d1-db157fde3026" class="cell" data-execution_count="378">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>adgange</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="378">
+<div id="aa6e7c3f-f4af-41be-ad6e-328bada9ca3d" class="cell" data-execution_count="45">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>adgange <span class="op">=</span> adgange.iloc[<span class="dv">2</span>:,<span class="dv">3</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="6318ff7f-c22e-4e85-a1a9-d9d2504ec10a" class="cell" data-execution_count="46">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>adgange <span class="op">=</span> adgange.<span class="bu">str</span>.split(<span class="st">"="</span>, expand<span class="op">=</span><span class="va">True</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="018950d9-9fd2-4b14-857f-7613fd01c7c8" class="cell" data-execution_count="47">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>adgange <span class="op">=</span> adgange.rename(columns<span class="op">=</span>{<span class="dv">0</span>: <span class="st">"id"</span>, <span class="dv">1</span>: <span class="st">"adgangsgrundlag"</span>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="9a3da444-77be-4d17-b7d1-db157fde3026" class="cell" data-execution_count="48">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>adgange</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="48">
 <div>
 
 
@@ -290,18 +596,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<div id="9d75288a-7e68-43fc-aad5-588c1ac9125c" class="cell" data-execution_count="379">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> df.iloc[<span class="dv">18</span>:]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="9d75288a-7e68-43fc-aad5-588c1ac9125c" class="cell" data-execution_count="49">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> df.iloc[<span class="dv">18</span>:]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="2110dabd-4d5d-474a-abe3-5a41047cb704" class="cell" data-execution_count="380">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>new_header <span class="op">=</span> df.iloc[<span class="dv">0</span>]</span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> df[<span class="dv">1</span>:]</span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>df.columns <span class="op">=</span> new_header </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="2110dabd-4d5d-474a-abe3-5a41047cb704" class="cell" data-execution_count="50">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>new_header <span class="op">=</span> df.iloc[<span class="dv">0</span>]</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> df[<span class="dv">1</span>:]</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>df.columns <span class="op">=</span> new_header </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Så er hoveddataene fra excelarket korrekt afgrænset og det har fået de korrekte kolonner</p>
-<div id="93953733-d6fe-4621-883b-0b6c719a2d87" class="cell" data-execution_count="381">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="381">
+<div id="93953733-d6fe-4621-883b-0b6c719a2d87" class="cell" data-execution_count="51">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="51">
 <div>
 
 
@@ -605,12 +911,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>Ovenstående dataframe er dog i wide format og det vil derfor være besværligt at lave analyse på. Derfor skal kolonnerne 1-15 pivoteres sådan at vi får to kolonner i stedet: “adgangsrundlag”, hvor værdierne vil være teksten på den uddannelse de studerende kommer fra, og “ansøgere” som vil være det antal som har søgt uddannelsen fra det givne adgangsgrundlag - denne vil erstatte “i alt” kolonnen da denne kan summeres efterfølgende.</p>
-<div id="816252c7-77dd-408d-b42b-51f0d2cf7518" class="cell" data-execution_count="382">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>res <span class="op">=</span> df.columns.tolist()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="816252c7-77dd-408d-b42b-51f0d2cf7518" class="cell" data-execution_count="52">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>res <span class="op">=</span> df.columns.tolist()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="08a1acbe-dda0-4dc4-a1bf-2fab8e5aed94" class="cell" data-execution_count="383">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>res</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="383">
+<div id="08a1acbe-dda0-4dc4-a1bf-2fab8e5aed94" class="cell" data-execution_count="53">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>res</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="53">
 <pre><code>['InstNr',
  'InstNavn',
  'OptNr',
@@ -634,15 +940,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  np.float64(15.0)]</code></pre>
 </div>
 </div>
-<div id="1f8195b7-9d3a-4467-aedb-1d5fae46459f" class="cell" data-execution_count="384">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>res <span class="op">=</span> res[<span class="dv">0</span>:<span class="dv">5</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="1f8195b7-9d3a-4467-aedb-1d5fae46459f" class="cell" data-execution_count="54">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>res <span class="op">=</span> res[<span class="dv">0</span>:<span class="dv">5</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="3da6dfc7-19b2-49b1-8680-7d86e9fd8c1e" class="cell" data-execution_count="385">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>melted <span class="op">=</span> pd.melt(df, id_vars<span class="op">=</span>res)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="3da6dfc7-19b2-49b1-8680-7d86e9fd8c1e" class="cell" data-execution_count="55">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>melted <span class="op">=</span> pd.melt(df, id_vars<span class="op">=</span>res)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="af0af279-2fe0-497d-bc66-74bf4553bafa" class="cell" data-execution_count="386">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>melted</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="386">
+<div id="af0af279-2fe0-497d-bc66-74bf4553bafa" class="cell" data-execution_count="56">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>melted</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="56">
 <div>
 
 
@@ -778,13 +1084,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>Ny mangler vi dog at “mappe” de forskelle adgangsgrundlag id’er sådan at der står det faktiske adgangsgrundlag og ikke tallet.</p>
-<div id="6a9d48ea-fce1-431d-af93-7843593a1eab" class="cell" data-execution_count="387">
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>d <span class="op">=</span> {}</span>
-<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> index, row <span class="kw">in</span> adgange.iterrows():</span>
-<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>    d[<span class="bu">float</span>(row[<span class="st">"id"</span>])] <span class="op">=</span> row[<span class="st">"adgangsgrundlag"</span>]</span>
-<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>d</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="387">
+<div id="6a9d48ea-fce1-431d-af93-7843593a1eab" class="cell" data-execution_count="57">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>d <span class="op">=</span> {}</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> index, row <span class="kw">in</span> adgange.iterrows():</span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>    d[<span class="bu">float</span>(row[<span class="st">"id"</span>])] <span class="op">=</span> row[<span class="st">"adgangsgrundlag"</span>]</span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>d</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="57">
 <pre><code>{1.0: 'stx',
  2.0: 'hf',
  3.0: 'hhx',
@@ -802,25 +1108,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  15.0: 'Grønlandsk gymnasial eksamen'}</code></pre>
 </div>
 </div>
-<div id="53b77b32-8d2a-4a34-a10b-c1df1e4d31f9" class="cell" data-execution_count="388">
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>pd.set_option(<span class="st">'future.no_silent_downcasting'</span>, <span class="va">False</span>)</span>
-<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="co">#melted[18] = melted[18].replace("Uoplyst", np.nan).infer_objects(copy=False)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="53b77b32-8d2a-4a34-a10b-c1df1e4d31f9" class="cell" data-execution_count="58">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>pd.set_option(<span class="st">'future.no_silent_downcasting'</span>, <span class="va">False</span>)</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="co">#melted[18] = melted[18].replace("Uoplyst", np.nan).infer_objects(copy=False)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="3a8d6e28-48f8-4952-8ebd-d371ba41f983" class="cell" data-execution_count="389">
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>melted[<span class="st">"adgangsgrundlag"</span>] <span class="op">=</span> melted[<span class="dv">18</span>].<span class="bu">map</span>(d)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="3a8d6e28-48f8-4952-8ebd-d371ba41f983" class="cell" data-execution_count="59">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>melted[<span class="st">"adgangsgrundlag"</span>] <span class="op">=</span> melted[<span class="dv">18</span>].<span class="bu">map</span>(d)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="3fd4804b-6825-4e0a-83e6-b9698930743f" class="cell" data-execution_count="390">
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>melted <span class="op">=</span> melted.drop(columns<span class="op">=</span><span class="dv">18</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="3fd4804b-6825-4e0a-83e6-b9698930743f" class="cell" data-execution_count="60">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>melted <span class="op">=</span> melted.drop(columns<span class="op">=</span><span class="dv">18</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="6b3a1821-b717-4655-a82c-1e9bf5fb37e0" class="cell" data-execution_count="391">
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>melted <span class="op">=</span> melted.rename(columns<span class="op">=</span>{<span class="st">"value"</span>: <span class="st">"antal"</span>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="6b3a1821-b717-4655-a82c-1e9bf5fb37e0" class="cell" data-execution_count="61">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>melted <span class="op">=</span> melted.rename(columns<span class="op">=</span>{<span class="st">"value"</span>: <span class="st">"antal"</span>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="4ba9d3b0-3aad-4806-884b-9eb320bc4d61" class="cell" data-execution_count="392">
-<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>melted[<span class="st">"adgangsgrundlag"</span>] <span class="op">=</span> melted[<span class="st">"adgangsgrundlag"</span>].replace(np.nan, <span class="st">"Uoplyst"</span>).infer_objects(copy<span class="op">=</span><span class="va">False</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="4ba9d3b0-3aad-4806-884b-9eb320bc4d61" class="cell" data-execution_count="62">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>melted[<span class="st">"adgangsgrundlag"</span>] <span class="op">=</span> melted[<span class="st">"adgangsgrundlag"</span>].replace(np.nan, <span class="st">"Uoplyst"</span>).infer_objects(copy<span class="op">=</span><span class="va">False</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="e1366d14-411f-42fc-9273-9bd002276734" class="cell" data-execution_count="393">
-<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>melted</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="393">
+<div id="e1366d14-411f-42fc-9273-9bd002276734" class="cell" data-execution_count="63">
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>melted</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="63">
 <div>
 
 
@@ -955,10 +1261,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<p>Her kan vi se at OptNavn inkluderer: uddannelsestitel, lokation, starttidspunkt, dette er en fordel hvis det</p>
-<div id="255d8371-8fdb-4bd0-86a9-876ae41295d1" class="cell" data-execution_count="394">
-<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>melted[<span class="st">"InstNavn"</span>].unique()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="394">
+<div id="255d8371-8fdb-4bd0-86a9-876ae41295d1" class="cell" data-execution_count="64">
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Finde InstNavn for CBS</span></span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>melted[<span class="st">"InstNavn"</span>].unique()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="64">
 <pre><code>array(['Københavns Universitet',
        'Copenhagen Business School - Handelshøjskolen',
        'IT-Universitetet i København', 'Danmarks Tekniske Universitet',
@@ -983,12 +1289,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
        'Erhvervsakademi Aarhus', 'Erhvervsakademi Dania'], dtype=object)</code></pre>
 </div>
 </div>
-<div id="8f3ed9cd-74ce-466b-ba57-411a2e4c4890" class="cell" data-execution_count="395">
-<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>CBS <span class="op">=</span> melted[melted[<span class="st">"InstNavn"</span>] <span class="op">==</span> <span class="st">"Copenhagen Business School - Handelshøjskolen"</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="8f3ed9cd-74ce-466b-ba57-411a2e4c4890" class="cell" data-execution_count="65">
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Filtrere CBS</span></span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>CBS <span class="op">=</span> melted[melted[<span class="st">"InstNavn"</span>] <span class="op">==</span> <span class="st">"Copenhagen Business School - Handelshøjskolen"</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="ce8f2b51-152a-4c75-9235-ce17c7cd8726" class="cell" data-execution_count="396">
-<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>CBS</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="396">
+<div id="ce8f2b51-152a-4c75-9235-ce17c7cd8726" class="cell" data-execution_count="66">
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>CBS</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="66">
 <div>
 
 
@@ -1124,16 +1431,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>Tilføjelse af procent kolonne</p>
-<div id="ad6294bc-cd67-4256-948f-b2c196b735e7" class="cell" data-execution_count="397">
-<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> altair <span class="im">as</span> alt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="ad6294bc-cd67-4256-948f-b2c196b735e7" class="cell" data-execution_count="67">
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> altair <span class="im">as</span> alt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="6cd95fc9-ae72-499b-9758-290f96c8e74f" class="cell" data-execution_count="398">
-<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="co"># lave ny kolonnen med procent af total med givne adgangsgrundlag</span></span>
-<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>melted[<span class="st">"procent"</span>] <span class="op">=</span> (melted[<span class="st">"antal"</span>] <span class="op">/</span> melted[<span class="st">"I alt"</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="6cd95fc9-ae72-499b-9758-290f96c8e74f" class="cell" data-execution_count="68">
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="co"># lave ny kolonnen med procent af total med givne adgangsgrundlag</span></span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>melted[<span class="st">"procent"</span>] <span class="op">=</span> (melted[<span class="st">"antal"</span>] <span class="op">/</span> melted[<span class="st">"I alt"</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="d0895ad6-a6c9-4a38-8ce4-17eff11e4470" class="cell" data-execution_count="399">
-<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>melted.dtypes</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="399">
+<div id="d0895ad6-a6c9-4a38-8ce4-17eff11e4470" class="cell" data-execution_count="69">
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>melted.dtypes</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="69">
 <pre><code>InstNr             object
 InstNavn           object
 OptNr              object
@@ -1145,9 +1452,9 @@ procent            object
 dtype: object</code></pre>
 </div>
 </div>
-<div id="0eebba25-5c83-43c3-b3ea-ea08ddcbc65c" class="cell" data-execution_count="400">
-<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>melted[<span class="st">'procent'</span>].astype(<span class="st">'float'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="400">
+<div id="0eebba25-5c83-43c3-b3ea-ea08ddcbc65c" class="cell" data-execution_count="70">
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>melted[<span class="st">'procent'</span>].astype(<span class="st">'float'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="70">
 <pre><code>0        0.002371
 1             NaN
 2             NaN
@@ -1162,34 +1469,34 @@ dtype: object</code></pre>
 Name: procent, Length: 14880, dtype: float64</code></pre>
 </div>
 </div>
-<div id="44e3b003-9ad5-402b-9ca6-f25bc8441121" class="cell" data-execution_count="401">
-<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>cbs_stx <span class="op">=</span> melted[(melted[<span class="st">'InstNr'</span>]<span class="op">==</span> <span class="dv">1300</span>) <span class="op">&amp;</span> (melted[<span class="st">'adgangsgrundlag'</span>] <span class="op">==</span> <span class="st">'stx'</span>)]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="44e3b003-9ad5-402b-9ca6-f25bc8441121" class="cell" data-execution_count="71">
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>cbs_stx <span class="op">=</span> melted[(melted[<span class="st">'InstNr'</span>]<span class="op">==</span> <span class="dv">1300</span>) <span class="op">&amp;</span> (melted[<span class="st">'adgangsgrundlag'</span>] <span class="op">==</span> <span class="st">'stx'</span>)]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="e4547468-24fa-428c-9c13-1ae2248d5044" class="cell" data-execution_count="402">
-<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>alt.Chart(cbs_stx).mark_point().encode(</span>
-<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a>    y<span class="op">=</span>alt.Y(<span class="st">'OptNavn'</span>, axis<span class="op">=</span>alt.Axis(labelAngle<span class="op">=</span><span class="dv">0</span>, labelLimit<span class="op">=</span><span class="dv">0</span>, titlePadding<span class="op">=</span><span class="dv">400</span>)),</span>
-<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a>    x<span class="op">=</span><span class="st">"procent"</span></span>
-<span id="cb37-4"><a href="#cb37-4" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="402">
+<div id="e4547468-24fa-428c-9c13-1ae2248d5044" class="cell" data-execution_count="72">
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>alt.Chart(cbs_stx).mark_point().encode(</span>
+<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a>    y<span class="op">=</span>alt.Y(<span class="st">'OptNavn'</span>, axis<span class="op">=</span>alt.Axis(labelAngle<span class="op">=</span><span class="dv">0</span>, labelLimit<span class="op">=</span><span class="dv">0</span>, titlePadding<span class="op">=</span><span class="dv">400</span>)),</span>
+<span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a>    x<span class="op">=</span><span class="st">"procent"</span></span>
+<span id="cb38-4"><a href="#cb38-4" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="72">
 
 <style>
-  #altair-viz-a340d4648cdf45838771792941ffa0a1.vega-embed {
+  #altair-viz-8cac0a854aae4c4fb99bf05758db8ecb.vega-embed {
     width: 100%;
     display: flex;
   }
 
-  #altair-viz-a340d4648cdf45838771792941ffa0a1.vega-embed details,
-  #altair-viz-a340d4648cdf45838771792941ffa0a1.vega-embed details summary {
+  #altair-viz-8cac0a854aae4c4fb99bf05758db8ecb.vega-embed details,
+  #altair-viz-8cac0a854aae4c4fb99bf05758db8ecb.vega-embed details summary {
     position: relative;
   }
 </style>
-<div id="altair-viz-a340d4648cdf45838771792941ffa0a1"></div>
+<div id="altair-viz-8cac0a854aae4c4fb99bf05758db8ecb"></div>
 <script type="text/javascript">
   var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-a340d4648cdf45838771792941ffa0a1") {
-      outputDiv = document.getElementById("altair-viz-a340d4648cdf45838771792941ffa0a1");
+    if (outputDiv.id !== "altair-viz-8cac0a854aae4c4fb99bf05758db8ecb") {
+      outputDiv = document.getElementById("altair-viz-8cac0a854aae4c4fb99bf05758db8ecb");
     }
 
     const paths = {
@@ -1242,31 +1549,17 @@ Name: procent, Length: 14880, dtype: float64</code></pre>
 </div>
 </div>
 <p>Her kan man altså se procentandelen af studerende for hver CBS Bachelor uddannelse, hvor den studerende har STX som adgangsgrundlag. Her giver det mening at de uddannelse med en STX procent på under 0.3 er på engelsk, hvor er vil være mange udenlandske studerende som derfor ikke har gået på STX. De engelske uddannelse ville give mening at analysere ved at se procentandelen af STX hvor udenlandske studerende er talt fra for at få en ide om hvilke grundlag de danske studerende har.</p>
-<div id="0a9cd310-1e6f-49fb-b94a-7d0a05811ee2" class="cell" data-execution_count="408">
-<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>cbs <span class="op">=</span> melted[melted[<span class="st">'InstNr'</span>] <span class="op">==</span> <span class="dv">1300</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="0a9cd310-1e6f-49fb-b94a-7d0a05811ee2" class="cell" data-execution_count="73">
+<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a>cbs <span class="op">=</span> melted[melted[<span class="st">'InstNr'</span>] <span class="op">==</span> <span class="dv">1300</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="ebb5fc48-196f-43e2-b209-5c0c1fff9d74" class="cell" data-execution_count="434">
-<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a>pd.set_option(<span class="st">'future.no_silent_downcasting'</span>, <span class="va">True</span>)</span>
-<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a>cbs[<span class="st">'antal'</span>] <span class="op">=</span> cbs[<span class="st">'antal'</span>].fillna(<span class="dv">0</span>)</span>
-<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a>cbs[<span class="st">'procent'</span>] <span class="op">=</span> cbs[<span class="st">'procent'</span>].fillna(<span class="dv">0</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>/var/folders/hv/7ry1mz3x5yggpfvwryvxtn5r0000gn/T/ipykernel_10789/3861367056.py:2: SettingWithCopyWarning: 
-A value is trying to be set on a copy of a slice from a DataFrame.
-Try using .loc[row_indexer,col_indexer] = value instead
-
-See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
-  cbs['antal'] = cbs['antal'].fillna(0)
-/var/folders/hv/7ry1mz3x5yggpfvwryvxtn5r0000gn/T/ipykernel_10789/3861367056.py:3: SettingWithCopyWarning: 
-A value is trying to be set on a copy of a slice from a DataFrame.
-Try using .loc[row_indexer,col_indexer] = value instead
-
-See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
-  cbs['procent'] = cbs['procent'].fillna(0)</code></pre>
+<div id="ebb5fc48-196f-43e2-b209-5c0c1fff9d74" class="cell" data-execution_count="74">
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a>pd.set_option(<span class="st">'future.no_silent_downcasting'</span>, <span class="va">True</span>)</span>
+<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a>cbs.loc[:, <span class="st">'antal'</span>] <span class="op">=</span> cbs[<span class="st">'antal'</span>].fillna(<span class="dv">0</span>)</span>
+<span id="cb40-3"><a href="#cb40-3" aria-hidden="true" tabindex="-1"></a>cbs.loc[:, <span class="st">'procent'</span>] <span class="op">=</span> cbs[<span class="st">'procent'</span>].fillna(<span class="dv">0</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</div>
-<div id="78715366-88b2-42ac-801c-5dbdebf550bd" class="cell" data-execution_count="428">
-<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>cbs.head(<span class="dv">20</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="428">
+<div id="78715366-88b2-42ac-801c-5dbdebf550bd" class="cell" data-execution_count="75">
+<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>cbs</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="75">
 <div>
 
 
@@ -1292,9 +1585,9 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 <td>13010</td>
 <td>Erhvervsøkonomi, HA, Frederiksberg, Studiestar...</td>
 <td>925</td>
-<td>0.0</td>
+<td>0</td>
 <td>Uoplyst</td>
-<td>0.000000</td>
+<td>0</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">76</td>
@@ -1303,9 +1596,9 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 <td>13015</td>
 <td>Erhvervsøkonomi-informationsteknologi, HA (it....</td>
 <td>223</td>
-<td>0.0</td>
+<td>0</td>
 <td>Uoplyst</td>
-<td>0.000000</td>
+<td>0</td>
 </tr>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">77</td>
@@ -1314,9 +1607,9 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 <td>13020</td>
 <td>Erhvervsøkonomi-erhvervsret, HA (jur.), Freder...</td>
 <td>305</td>
-<td>0.0</td>
+<td>0</td>
 <td>Uoplyst</td>
-<td>0.000000</td>
+<td>0</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">78</td>
@@ -1325,9 +1618,9 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 <td>13023</td>
 <td>Erhvervsøkonomi og markeds- og kulturanalyse, ...</td>
 <td>251</td>
-<td>0.0</td>
+<td>0</td>
 <td>Uoplyst</td>
-<td>0.000000</td>
+<td>0</td>
 </tr>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">79</td>
@@ -1336,207 +1629,109 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 <td>13025</td>
 <td>Erhvervsøkonomi-matematik, HA (mat.), Frederik...</td>
 <td>89</td>
-<td>0.0</td>
+<td>0</td>
 <td>Uoplyst</td>
-<td>0.000000</td>
+<td>0</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">80</td>
-<td>1300</td>
-<td>Copenhagen Business School - Handelshøjskolen</td>
-<td>13030</td>
-<td>Erhvervsøkonomi-filosofi, HA (fil.), Frederiks...</td>
-<td>83</td>
-<td>0.0</td>
-<td>Uoplyst</td>
-<td>0.000000</td>
+<td data-quarto-table-cell-role="th">...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">81</td>
-<td>1300</td>
-<td>Copenhagen Business School - Handelshøjskolen</td>
-<td>13035</td>
-<td>Erhvervsøkonomi-virksomhedskommunikation, HA (...</td>
-<td>217</td>
-<td>0.0</td>
-<td>Uoplyst</td>
-<td>0.000000</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">82</td>
-<td>1300</td>
-<td>Copenhagen Business School - Handelshøjskolen</td>
-<td>13040</td>
-<td>Erhvervsøkonomi-psykologi, HA (psyk.), Frederi...</td>
-<td>447</td>
-<td>0.0</td>
-<td>Uoplyst</td>
-<td>0.000000</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">83</td>
-<td>1300</td>
-<td>Copenhagen Business School - Handelshøjskolen</td>
-<td>13045</td>
-<td>Erhvervsøkonomi, HA (Projektledelse), Frederik...</td>
-<td>342</td>
-<td>0.0</td>
-<td>Uoplyst</td>
-<td>0.000000</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">84</td>
-<td>1300</td>
-<td>Copenhagen Business School - Handelshøjskolen</td>
-<td>13055</td>
-<td>Business, Language and Culture, Frederiksberg,...</td>
-<td>219</td>
-<td>1.0</td>
-<td>Uoplyst</td>
-<td>0.004566</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">85</td>
-<td>1300</td>
-<td>Copenhagen Business School - Handelshøjskolen</td>
-<td>13060</td>
-<td>International Business, Frederiksberg, Study s...</td>
-<td>1229</td>
-<td>10.0</td>
-<td>Uoplyst</td>
-<td>0.008137</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">86</td>
-<td>1300</td>
-<td>Copenhagen Business School - Handelshøjskolen</td>
-<td>13070</td>
-<td>International Business and Politics, Frederiks...</td>
-<td>420</td>
-<td>2.0</td>
-<td>Uoplyst</td>
-<td>0.004762</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">87</td>
-<td>1300</td>
-<td>Copenhagen Business School - Handelshøjskolen</td>
-<td>13075</td>
-<td>Business Administration and Sociology, Frederi...</td>
-<td>244</td>
-<td>1.0</td>
-<td>Uoplyst</td>
-<td>0.004098</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">88</td>
-<td>1300</td>
-<td>Copenhagen Business School - Handelshøjskolen</td>
-<td>13080</td>
-<td>Business Administration and Service Management...</td>
-<td>328</td>
-<td>1.0</td>
-<td>Uoplyst</td>
-<td>0.003049</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">89</td>
+<td data-quarto-table-cell-role="th">14039</td>
 <td>1300</td>
 <td>Copenhagen Business School - Handelshøjskolen</td>
 <td>13085</td>
 <td>Business, Asian Language and Culture - Interna...</td>
 <td>71</td>
-<td>2.0</td>
-<td>Uoplyst</td>
-<td>0.028169</td>
+<td>0</td>
+<td>Grønlandsk gymnasial eksamen</td>
+<td>0</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">90</td>
+<td data-quarto-table-cell-role="th">14040</td>
 <td>1300</td>
 <td>Copenhagen Business School - Handelshøjskolen</td>
 <td>13090</td>
 <td>Business, Asian Language and Culture - Interna...</td>
 <td>72</td>
-<td>0.0</td>
-<td>Uoplyst</td>
-<td>0.000000</td>
+<td>0</td>
+<td>Grønlandsk gymnasial eksamen</td>
+<td>0</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">91</td>
+<td data-quarto-table-cell-role="th">14041</td>
 <td>1300</td>
 <td>Copenhagen Business School - Handelshøjskolen</td>
 <td>13100</td>
 <td>Business Administration and Digital Management...</td>
 <td>601</td>
-<td>5.0</td>
-<td>Uoplyst</td>
-<td>0.008319</td>
+<td>0</td>
+<td>Grønlandsk gymnasial eksamen</td>
+<td>0</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">92</td>
+<td data-quarto-table-cell-role="th">14042</td>
 <td>1300</td>
 <td>Copenhagen Business School - Handelshøjskolen</td>
 <td>13280</td>
 <td>International Shipping and Trade, Frederiksber...</td>
 <td>272</td>
-<td>1.0</td>
-<td>Uoplyst</td>
-<td>0.003676</td>
+<td>0</td>
+<td>Grønlandsk gymnasial eksamen</td>
+<td>0</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">93</td>
+<td data-quarto-table-cell-role="th">14043</td>
 <td>1300</td>
 <td>Copenhagen Business School - Handelshøjskolen</td>
 <td>13290</td>
 <td>Europæisk business, HA i europæisk business, F...</td>
 <td>273</td>
-<td>0.0</td>
-<td>Uoplyst</td>
-<td>0.000000</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">1005</td>
-<td>1300</td>
-<td>Copenhagen Business School - Handelshøjskolen</td>
-<td>13010</td>
-<td>Erhvervsøkonomi, HA, Frederiksberg, Studiestar...</td>
-<td>925</td>
-<td>395.0</td>
-<td>stx</td>
-<td>0.427027</td>
+<td>0</td>
+<td>Grønlandsk gymnasial eksamen</td>
+<td>0</td>
 </tr>
 </tbody>
 </table>
 
+<p>304 rows × 8 columns</p>
 </div>
 </div>
 </div>
-<div id="83e1e409-7498-4f3e-a1e9-3c34a0c5acf9" class="cell" data-execution_count="433">
+<div id="83e1e409-7498-4f3e-a1e9-3c34a0c5acf9" class="cell" data-execution_count="76">
 <div class="sourceCode cell-code" id="cb42"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a>alt.Chart(cbs).mark_bar().encode(</span>
 <span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a>    y<span class="op">=</span>alt.Y(<span class="st">'OptNavn'</span>, axis<span class="op">=</span>alt.Axis(labelAngle<span class="op">=</span><span class="dv">0</span>, labelLimit<span class="op">=</span><span class="dv">0</span>, titlePadding<span class="op">=</span><span class="dv">400</span>)),</span>
 <span id="cb42-3"><a href="#cb42-3" aria-hidden="true" tabindex="-1"></a>    x<span class="op">=</span><span class="st">"procent"</span>,</span>
 <span id="cb42-4"><a href="#cb42-4" aria-hidden="true" tabindex="-1"></a>    color<span class="op">=</span><span class="st">'adgangsgrundlag'</span></span>
 <span id="cb42-5"><a href="#cb42-5" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="433">
+<div class="cell-output cell-output-display" data-execution_count="76">
 
 <style>
-  #altair-viz-ab817309e21646aaabf787a9e199c589.vega-embed {
+  #altair-viz-4e0fbe382efd4bf28bf9251d05121853.vega-embed {
     width: 100%;
     display: flex;
   }
 
-  #altair-viz-ab817309e21646aaabf787a9e199c589.vega-embed details,
-  #altair-viz-ab817309e21646aaabf787a9e199c589.vega-embed details summary {
+  #altair-viz-4e0fbe382efd4bf28bf9251d05121853.vega-embed details,
+  #altair-viz-4e0fbe382efd4bf28bf9251d05121853.vega-embed details summary {
     position: relative;
   }
 </style>
-<div id="altair-viz-ab817309e21646aaabf787a9e199c589"></div>
+<div id="altair-viz-4e0fbe382efd4bf28bf9251d05121853"></div>
 <script type="text/javascript">
   var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-ab817309e21646aaabf787a9e199c589") {
-      outputDiv = document.getElementById("altair-viz-ab817309e21646aaabf787a9e199c589");
+    if (outputDiv.id !== "altair-viz-4e0fbe382efd4bf28bf9251d05121853") {
+      outputDiv = document.getElementById("altair-viz-4e0fbe382efd4bf28bf9251d05121853");
     }
 
     const paths = {
