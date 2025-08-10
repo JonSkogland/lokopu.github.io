@@ -3,7 +3,10 @@ title: "Posts"
 listing:
   contents: posts
   sort: "date desc"
+  date-format: iso
   template: gallery.ejs
+  feed: 
+    items: 10
 ---
 
 

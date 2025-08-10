@@ -2,12 +2,18 @@
 title: "Jon Skogland"
 about:
     template: solana
+listing:
+  contents: posts
+  max-items: 3
+  sort: "date desc"
+  date-format: iso
+  template: gallery.ejs
 ---
 
-This is my personal page, where I'm going to share thoughts, learnings and things that I pursue.
+I'm a business intelligence analyst who's in the process of learning programming, data engineering and machine learning - to take my data skills to new heights.
 <br/><br/>
-Click the above Posts link to see my recent posts
+I use this site to share my progress, thoughts, learnings and anything in between.
 <br/><br/>
-You can follow me here:
+Below you can see my three most recent posts (the rest you'll find in the navbar)
 
-- My Github: [@JonSkogland](https://github.com/JonSkogland)
+

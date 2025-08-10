@@ -10,7 +10,12 @@ website:
         text: Posts
       - href: pdfs/Online_CV.pdf
         text: CV
+      - icon: github
+        href: https://github.com/JonSkogland
   search: false
+  page-footer: 
+    center: "Copyright 2025, Jon Palmblad Skogland"     
+    background: light
 
 format:
   html:
