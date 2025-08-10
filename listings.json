@@ -1,7 +1,35 @@
 [
   {
+    "listing": "/index.html",
+    "items": [
+      "/posts/Day 22 - Alder for optagne.html",
+      "/posts/Day 21 - Uddannelse.html",
+      "/posts/Day 20 - Plotting practice.html",
+      "/posts/Day 19 - DecisionTreeRegressor.html",
+      "/posts/Day 18 - pandas.html",
+      "/posts/Day 17 - Formula 1 API.html",
+      "/posts/Day 16 - Tracking of ISS on globe.html",
+      "/posts/Day 15 - Classification.html",
+      "/posts/Day 14 - Pandas exploration.html",
+      "/posts/Day 13 - weather api.html",
+      "/posts/Day 12 - TicTacToe.html",
+      "/posts/Day 11 - Rock, paper, scissor.html",
+      "/posts/Day 10 - Retrieving by books by subject with API.html",
+      "/posts/Day 9 - Retrieving image with API.html",
+      "/posts/Day 8 - Python challenge.html",
+      "/posts/Day 7 - price optimization.html",
+      "/posts/Day 6 - Multivariate Linear regression.html",
+      "/posts/Day 5 - Web scraping.html",
+      "/posts/Day 4 - API and SQL.html",
+      "/posts/Day 3 - data wrangling and plotting.html",
+      "/posts/Day 2  - 1000 days of coding.html",
+      "/posts/Day 1 - 1000 days of coding.html"
+    ]
+  },
+  {
     "listing": "/posts.html",
     "items": [
+      "/posts/Day 22 - Alder for optagne.html",
       "/posts/Day 21 - Uddannelse.html",
       "/posts/Day 20 - Plotting practice.html",
       "/posts/Day 19 - DecisionTreeRegressor.html",
