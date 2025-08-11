@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2025-08-11">
 
-<title>Posts – Jon Skogland</title>
+<title>23 - Classes practice (recreating simple pandas DataFrame) – Jon Skogland</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,23 +21,57 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-aa6e75262e920073ef28bb9689fb49d8.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-aa6e75262e920073ef28bb9689fb49d8.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "language": {
     "search-no-results-text": "No results",
@@ -52,77 +87,22 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 
-    const options = {
-      valueNames: ['listing-project','listing-website','listing-format','listing-language','listing-freeze','listing-title-block-banner','listing-title','listing-date','listing-path','listing-outputHref','listing-date-modified','listing-author','listing-description','listing-filename','listing-file-modified','listing-reading-time','listing-word-count','listing-tags','listing-categories','listing-date-format',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-date-modified-sort'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] },{ data: ['listing-word-count-sort'] }],
-      
-      searchColumns: ["listing-project","listing-website","listing-format","listing-language","listing-freeze","listing-title-block-banner","listing-title","listing-date","listing-path","listing-outputHref","listing-date-modified","listing-author","listing-description","listing-filename","listing-file-modified","listing-reading-time","listing-word-count","listing-tags","listing-categories","listing-date-format"],
-    };
 
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../styles.css">
 </head>
 
-<body class="nav-fixed fullcontent quarto-light">
+<body class="nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Jon Skogland</span>
     </a>
   </div>
@@ -132,11 +112,11 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./posts.html" aria-current="page"> 
+    <a class="nav-link" href="../posts.html"> 
 <span class="menu-text">Posts</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./pdfs/Online_CV.pdf"> 
+    <a class="nav-link" href="../pdfs/Online_CV.pdf"> 
 <span class="menu-text">CV</span></a>
   </li>  
   <li class="nav-item compact">
@@ -152,104 +132,133 @@ window.Quarto = {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">23 - Classes practice (recreating simple pandas DataFrame)</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">python</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">August 11, 2025</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
-<!-- main -->
-<div class="quarto-about-solana column-body">
-  <div class="about-entity">
-    <div class="entity-contents">
-      <header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Posts</h1>
-</div>
-<div class="quarto-title-meta">
-  </div>
-</header> 
-      <div class="about-contents"><main class="content" id="quarto-document-content">
-
-
-<div class="quarto-listing quarto-listing-container-custom" id="listing-listing">
-<ul>
-<li>
-<a href="./posts/23 - classes practice.html"> 2025-08-11 - 23 - Classes practice (recreating simple pandas DataFrame)</a>
-</li>
-<li>
-<a href="./posts/Day 22 - Alder for optagne.html"> 2025-08-10 - Day 22 - Alder for optagne på uddannelse</a>
-</li>
-<li>
-<a href="./posts/Day 21 - Uddannelse.html"> 2025-08-06 - Day 21 - Exploratory Data Analysis af adgangsgrundlag for vidergående uddannelser</a>
-</li>
-<li>
-<a href="./posts/Day 20 - Plotting practice.html"> 2025-07-01 - Day 20 - Plotting practice</a>
-</li>
-<li>
-<a href="./posts/Day 19 - DecisionTreeRegressor.html"> 2025-06-30 - Day 19 - DecisionTreeRegressor</a>
-</li>
-<li>
-<a href="./posts/Day 18 - pandas.html"> 2025-06-29 - Day 18 - Pandas and Altair</a>
-</li>
-<li>
-<a href="./posts/Day 17 - Formula 1 API.html"> 2025-06-28 - Day 17 - Formula 1 API</a>
-</li>
-<li>
-<a href="./posts/Day 16 - Tracking of ISS on globe.html"> 2025-06-27 - Day 16 - Tracking of ISS on globe</a>
-</li>
-<li>
-<a href="./posts/Day 15 - Classification.html"> 2025-06-26 - Day 15 - Classification</a>
-</li>
-<li>
-<a href="./posts/Day 14 - Pandas exploration.html"> 2025-06-25 - Day 14 - Pandas exploration</a>
-</li>
-<li>
-<a href="./posts/Day 13 - weather api.html"> 2025-06-24 - Day 13 - Weather API</a>
-</li>
-<li>
-<a href="./posts/Day 12 - TicTacToe.html"> 2025-06-22 - Day 12 - TicTacToe</a>
-</li>
-<li>
-<a href="./posts/Day 11 - Rock, paper, scissor.html"> 2025-06-21 - Day 11 - Rock, Paper, Scissor</a>
-</li>
-<li>
-<a href="./posts/Day 10 - Retrieving by books by subject with API.html"> 2025-06-20 - Day 10 - Retrieving by books by subject with API</a>
-</li>
-<li>
-<a href="./posts/Day 9 - Retrieving image with API.html"> 2025-06-19 - Day 9 - Retrieving image with API</a>
-</li>
-<li>
-<a href="./posts/Day 8 - Python challenge.html"> 2025-06-18 - Day 8 - Dice roll generator</a>
-</li>
-<li>
-<a href="./posts/Day 7 - price optimization.html"> 2025-06-17 - Day 7 - Price optimization</a>
-</li>
-<li>
-<a href="./posts/Day 6 - Multivariate Linear regression.html"> 2025-06-16 - Day 6 - multivariate linear regression</a>
-</li>
-<li>
-<a href="./posts/Day 5 - Web scraping.html"> 2025-06-15 - Day 5 - Web scraping</a>
-</li>
-<li>
-<a href="./posts/Day 4 - API and SQL.html"> 2025-06-14 - Day 4 - API and SQL</a>
-</li>
-<li>
-<a href="./posts/Day 3 - data wrangling and plotting.html"> 2025-06-13 - Day 3 - data wrangling and plotting</a>
-</li>
-<li>
-<a href="./posts/Day 2  - 1000 days of coding.html"> 2025-06-12 - Day 2 - Linear regression on big mac price vs GDP</a>
-</li>
-<li>
-<a href="./posts/Day 1 - 1000 days of coding.html"> 2025-06-11 - Day 1 - Linear regression on numerical data</a>
-</li>
-</ul>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main></div>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
-  </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+
+<div id="de31ed96-37b5-439a-ba0b-2917736567f9" class="cell" data-execution_count="52">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> IPython.display <span class="im">import</span> display, HTML</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
- <!-- /main -->
+<p><strong>Recreating the DataFrame class</strong></p>
+<div id="24c1138e-345c-4686-ac4e-d88b402a441a" class="cell" data-execution_count="63">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> DataFrameCopy:</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, data: <span class="bu">dict</span>):</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.data <span class="op">=</span> data</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.create_index() <span class="co"># Run method to create index on initializing of object</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Add index to dataset</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> create_index(<span class="va">self</span>):</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>        df <span class="op">=</span> {} </span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>        max_rows <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>       </span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> key, value <span class="kw">in</span> <span class="va">self</span>.data.items():  <span class="co"># return max number of rows to propagate index</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> <span class="bu">len</span>(value) <span class="op">&gt;</span> max_rows:</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>                max_rows <span class="op">=</span> <span class="bu">len</span>(value)</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>        index_length <span class="op">=</span> <span class="bu">list</span>(<span class="bu">range</span>(<span class="dv">0</span>, max_rows)) <span class="co"># Create index column</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>        df[<span class="st">'index'</span>] <span class="op">=</span> index_length <span class="co"># Add index to temp dict</span></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>        df.update(<span class="va">self</span>.data) <span class="co"># Add initialize data to temp dict and reassign data that includes index</span></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.data <span class="op">=</span> df</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Replicating the head function of pandas</span></span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> head(<span class="va">self</span>, rows: <span class="bu">int</span>):</span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>        table <span class="op">=</span> <span class="st">'&lt;table style="border-collapse: collapse; font-family: Arial; font-size: 14px;"&gt;'</span></span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>        <span class="co"># loop to insert columns</span></span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>        table <span class="op">+=</span> <span class="st">'&lt;tr&gt;'</span></span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> key <span class="kw">in</span> <span class="va">self</span>.data.keys():</span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>            table <span class="op">+=</span> <span class="ss">f'&lt;th&gt;</span><span class="sc">{</span>key<span class="sc">}</span><span class="ss">&lt;/th&gt;'</span></span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>        table <span class="op">+=</span> <span class="st">'&lt;/tr&gt;'</span></span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Below is the loop to insert rows values for each column</span></span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>        i <span class="op">=</span> <span class="dv">0</span> <span class="co"># i is used to keep track of the row level, whereby</span></span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>        <span class="cf">while</span> <span class="va">True</span>:</span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>            <span class="cf">for</span> key, value <span class="kw">in</span> <span class="va">self</span>.data.items():</span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a>                table <span class="op">+=</span> <span class="ss">f"&lt;td&gt;</span><span class="sc">{</span>value[i]<span class="sc">}</span><span class="ss">&lt;/td&gt;"</span></span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a>            table <span class="op">+=</span> <span class="st">"&lt;/tr&gt;"</span></span>
+<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a>            i <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a>            <span class="co"># When desired amount of rows have been inserted in html, break loop</span></span>
+<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> i <span class="op">==</span> rows:</span>
+<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a>               <span class="cf">break</span></span>
+<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a>        table <span class="op">+=</span> <span class="st">"&lt;/table&gt;"</span></span>
+<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Read string as html</span></span>
+<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a>        chart <span class="op">=</span> HTML(table)</span>
+<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> display(chart)</span>
+<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a>       </span>
+<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a>    </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Initializing DataFrameCopy class with data in the form of dictionary just like in pandas</p>
+<div id="dd753d83-81b4-4aa9-bc4d-dd45517d8e68" class="cell" data-execution_count="64">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> {<span class="st">'Col 1'</span>: [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>], <span class="st">'Col 2'</span>: [<span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>, <span class="dv">10</span>]}</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> DataFrameCopy(data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Below the data from the object is called where we can see that the index has been automatically created</p>
+<div id="bc7700b6-42a6-4a5d-9156-52f8601fadc4" class="cell" data-execution_count="65">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>df.data</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="65">
+<pre><code>{'index': [0, 1, 2, 3, 4], 'Col 1': [1, 2, 3, 4, 5], 'Col 2': [6, 7, 8, 9, 10]}</code></pre>
+</div>
+</div>
+<p>Using the head method for the class works simply like the pandas version, where we can choose the amount of rows we would like to show. The method then displays a html table of the data for improved readability.</p>
+<div id="bdf6adbf-e109-4c8d-aba4-4bf4ab08d4fb" class="cell" data-execution_count="66">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>df.head(<span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<table style="border-collapse: collapse; font-family: Arial; font-size: 14px;"><tbody><tr><th>index</th><th>Col 1</th><th>Col 2</th></tr><tr><td>0</td><td>1</td><td>6</td></tr><tr><td>1</td><td>2</td><td>7</td></tr><tr><td>2</td><td>3</td><td>8</td></tr><tr><td>3</td><td>4</td><td>9</td></tr></tbody></table>
+</div>
+</div>
+
+
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
     const isCodeAnnotation = (el) => {
       for (const clz of el.classList) {
         if (clz.startsWith('code-annotation-')) {                     
