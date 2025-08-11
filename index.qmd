@@ -3,11 +3,11 @@ title: "Jon Skogland"
 about:
     template: solana
 listing:
-  contents: posts
-  max-items: 3
-  sort: "date desc"
-  date-format: iso
-  template: gallery.ejs
+    contents: posts
+    max-items: 3
+    sort: "date desc"
+    date-format: iso
+    template: gallery.ejs
 ---
 
 I'm a business intelligence analyst who's in the process of learning programming, data engineering and machine learning - to take my data skills to new heights.
