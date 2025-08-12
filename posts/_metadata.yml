@@ -4,4 +4,5 @@
 freeze: auto
 
 # enable banner style title blocks ----
+title-block-style: default
 title-block-banner: true
