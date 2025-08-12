@@ -2,106 +2,110 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://jonskogland.com/index.html</loc>
-    <lastmod>2025-08-11T08:43:53.402Z</lastmod>
+    <lastmod>2025-08-12T08:15:07.027Z</lastmod>
   </url>
   <url>
     <loc>https://jonskogland.com/posts.html</loc>
-    <lastmod>2025-08-11T08:43:53.402Z</lastmod>
+    <lastmod>2025-08-12T08:15:07.027Z</lastmod>
   </url>
   <url>
     <loc>https://jonskogland.com/posts/Day 22 - Alder for optagne.html</loc>
-    <lastmod>2025-08-11T08:43:53.412Z</lastmod>
+    <lastmod>2025-08-12T08:15:07.037Z</lastmod>
   </url>
   <url>
-    <loc>https://jonskogland.com/posts/Day 18 - pandas.html</loc>
-    <lastmod>2025-08-11T08:43:53.410Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jonskogland.com/posts/Day 19 - DecisionTreeRegressor.html</loc>
-    <lastmod>2025-08-11T08:43:53.410Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jonskogland.com/posts/Day 14 - Pandas exploration.html</loc>
-    <lastmod>2025-08-11T08:43:53.410Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jonskogland.com/posts/Day 9 - Retrieving image with API.html</loc>
-    <lastmod>2025-08-11T08:43:53.412Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jonskogland.com/posts/23 - classes practice.html</loc>
-    <lastmod>2025-08-11T08:43:53.410Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jonskogland.com/posts/Day 15 - Classification.html</loc>
-    <lastmod>2025-08-11T08:43:53.410Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jonskogland.com/posts/Day 12 - TicTacToe.html</loc>
-    <lastmod>2025-08-11T08:43:53.410Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jonskogland.com/posts/Day 20 - Plotting practice.html</loc>
-    <lastmod>2025-08-11T08:43:53.411Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jonskogland.com/posts/Day 17 - Formula 1 API.html</loc>
-    <lastmod>2025-08-11T08:43:53.410Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jonskogland.com/posts/Day 2  - 1000 days of coding.html</loc>
-    <lastmod>2025-08-11T08:43:53.411Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jonskogland.com/posts/Day 1 - 1000 days of coding.html</loc>
-    <lastmod>2025-08-11T08:43:53.410Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jonskogland.com/posts/Day 5 - Web scraping.html</loc>
-    <lastmod>2025-08-11T08:43:53.412Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jonskogland.com/posts/Day 16 - Tracking of ISS on globe.html</loc>
-    <lastmod>2025-08-11T08:43:53.410Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jonskogland.com/posts/Day 6 - Multivariate Linear regression.html</loc>
-    <lastmod>2025-08-11T08:43:53.412Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jonskogland.com/posts/Day 4 - API and SQL.html</loc>
-    <lastmod>2025-08-11T08:43:53.412Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jonskogland.com/posts/Day 10 - Retrieving by books by subject with API.html</loc>
-    <lastmod>2025-08-11T08:43:53.410Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jonskogland.com/posts/Day 21 - Uddannelse.html</loc>
-    <lastmod>2025-08-11T08:43:53.411Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jonskogland.com/posts/Day 3 - data wrangling and plotting.html</loc>
-    <lastmod>2025-08-11T08:43:53.412Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jonskogland.com/posts/Day 7 - price optimization.html</loc>
-    <lastmod>2025-08-11T08:43:53.412Z</lastmod>
+    <loc>https://jonskogland.com/posts/24 - random book picker.html</loc>
+    <lastmod>2025-08-12T08:15:07.035Z</lastmod>
   </url>
   <url>
     <loc>https://jonskogland.com/posts/Day 8 - Python challenge.html</loc>
-    <lastmod>2025-08-11T08:43:53.412Z</lastmod>
+    <lastmod>2025-08-12T08:15:07.037Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jonskogland.com/posts/Day 7 - price optimization.html</loc>
+    <lastmod>2025-08-12T08:15:07.037Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jonskogland.com/posts/Day 3 - data wrangling and plotting.html</loc>
+    <lastmod>2025-08-12T08:15:07.037Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jonskogland.com/posts/Day 21 - Uddannelse.html</loc>
+    <lastmod>2025-08-12T08:15:07.036Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jonskogland.com/posts/Day 10 - Retrieving by books by subject with API.html</loc>
+    <lastmod>2025-08-12T08:15:07.035Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jonskogland.com/posts/Day 4 - API and SQL.html</loc>
+    <lastmod>2025-08-12T08:15:07.037Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jonskogland.com/posts/Day 6 - Multivariate Linear regression.html</loc>
+    <lastmod>2025-08-12T08:15:07.037Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jonskogland.com/posts/Day 16 - Tracking of ISS on globe.html</loc>
+    <lastmod>2025-08-12T08:15:07.035Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jonskogland.com/posts/Day 5 - Web scraping.html</loc>
+    <lastmod>2025-08-12T08:15:07.037Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jonskogland.com/posts/Day 1 - 1000 days of coding.html</loc>
+    <lastmod>2025-08-12T08:15:07.035Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jonskogland.com/posts/Day 2  - 1000 days of coding.html</loc>
+    <lastmod>2025-08-12T08:15:07.035Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jonskogland.com/posts/Day 17 - Formula 1 API.html</loc>
+    <lastmod>2025-08-12T08:15:07.035Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jonskogland.com/posts/Day 20 - Plotting practice.html</loc>
+    <lastmod>2025-08-12T08:15:07.036Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jonskogland.com/posts/Day 12 - TicTacToe.html</loc>
+    <lastmod>2025-08-12T08:15:07.035Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jonskogland.com/posts/Day 15 - Classification.html</loc>
+    <lastmod>2025-08-12T08:15:07.035Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jonskogland.com/posts/23 - classes practice.html</loc>
+    <lastmod>2025-08-12T08:15:07.035Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jonskogland.com/posts/Day 9 - Retrieving image with API.html</loc>
+    <lastmod>2025-08-12T08:15:07.037Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jonskogland.com/posts/Day 14 - Pandas exploration.html</loc>
+    <lastmod>2025-08-12T08:15:07.035Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jonskogland.com/posts/Day 19 - DecisionTreeRegressor.html</loc>
+    <lastmod>2025-08-12T08:15:07.035Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jonskogland.com/posts/Day 18 - pandas.html</loc>
+    <lastmod>2025-08-12T08:15:07.035Z</lastmod>
   </url>
   <url>
     <loc>https://jonskogland.com/posts/Day 13 - weather api.html</loc>
-    <lastmod>2025-08-11T08:43:53.410Z</lastmod>
+    <lastmod>2025-08-12T08:15:07.035Z</lastmod>
   </url>
   <url>
     <loc>https://jonskogland.com/posts/Day 11 - Rock, paper, scissor.html</loc>
-    <lastmod>2025-08-11T08:43:53.410Z</lastmod>
+    <lastmod>2025-08-12T08:15:07.035Z</lastmod>
   </url>
   <url>
     <loc>https://jonskogland.com/about.html</loc>
-    <lastmod>2025-08-11T08:43:53.394Z</lastmod>
+    <lastmod>2025-08-12T08:15:07.018Z</lastmod>
   </url>
 </urlset>
