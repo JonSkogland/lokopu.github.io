@@ -10,7 +10,7 @@ listing:
     template: gallery.ejs
 ---
 
-I'm a business intelligence analyst who's in the process of learning programming, data engineering and machine learning - to take my data skills to new heights.
+I'm a business intelligence analyst who's in the process of learning programming and exploring topics in data analysis, data engineering and machine learning - to take my data skills to new heights.
 <br/><br/>
 I use this site to share my progress, thoughts, learnings and anything in between.
 <br/><br/>
