@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/27 - Greedy algorithm.html",
       "/posts/26 - Exploring plotly and interactive dashboards.html",
       "/posts/25 - Delhi PM2.5 (Normal distribution).html",
       "/posts/24 - random book picker.html",
@@ -33,6 +34,7 @@
   {
     "listing": "/posts.html",
     "items": [
+      "/posts/27 - Greedy algorithm.html",
       "/posts/26 - Exploring plotly and interactive dashboards.html",
       "/posts/25 - Delhi PM2.5 (Normal distribution).html",
       "/posts/24 - random book picker.html",
